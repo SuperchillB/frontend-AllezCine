@@ -13,6 +13,17 @@ Tsinxias Zhang.
 
 ### Project description
 
+**Deadline** : 2 weeks  
+**Language used** :  
+- HTML
+- CSS
+- JavaScript
+- JQuery
+- Responsive Design (Media Queries)
+- Bootstrap
+- Font Awesome Icons
+
+
 #### A. One Pager
 
 Create a One Pager with a provided design : https://github.com/becodeorg/Hamilton-promo-3/blob/master/Projects/FrontEnd-AllezCine/layout-one-v2.jpg  
