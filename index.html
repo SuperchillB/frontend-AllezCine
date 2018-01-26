@@ -101,13 +101,34 @@
 			<div class="d-flex align-items-center">
 				<p><i class="fa fa-phone" aria-hidden="true"></i> (+000) 009 455 4088</p>
 				<button type="button" class="btn btn-dark">LOGIN</button>
+
+        <div id="loginModal" class="d-flex flex-column">
+          <div id="loginTitle">
+            <h4>Log In</h4>
+          </div>
+          <form action="" id="loginForm" class="d-flex flex-column">
+            <input type="text" name="" value="" id="loginUsername" placeholder="Username">
+            <input type="password" name="" value="" id="loginPassword" placeholder="Password">
+            <div>
+              <input type="checkbox" name="" value="" id="loginCheck">
+              <label for="loginCheck">Stay connected</label>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-danger" type="submit" value="Submit">Log In</button>
+              <button id="loginSignUp" class="btn btn-danger">Sign up</button>
+            </div>
+            <a href="#">Forgot your password ?</a>
+            <button id="loginCancel" class="btn btn-secondary">Cancel</button>
+          </form>
+        </div>
+
 				<button type="button" class="btn btn-dark">REGISTER</button>
 			</div>
 		</header>
 
 
         <p>Hello world! This is HTML5 Boilerplate.</p>
-		
+
 
 
 
@@ -709,22 +730,22 @@
             <div class="d-flex flex-column align-items-center">
               <div class="col-sm-9 d-flex">
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" placeholder="FIRST NAME">
+                  <input required type="text" class="form-control" placeholder="FIRST NAME">
                 </div>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" placeholder="LAST NAME">
+                  <input required type="text" class="form-control" placeholder="LAST NAME">
                 </div>
               </div>
               <div class="col-sm-9 d-flex">
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" placeholder="EMAIL">
+                  <input required type="text" class="form-control" placeholder="EMAIL">
                 </div>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" placeholder="SUBJECT">
+                  <input required type="text" class="form-control" placeholder="SUBJECT">
                 </div>
               </div>
               <div class="col-sm-9 text-center">
-                <textarea name="name" rows="8" cols="117" placeholder="YOUR MESSAGE"></textarea>
+                <textarea name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE"></textarea>
               </div>
               <button class="btn btn-danger">SEND MESSAGE</button>
 
