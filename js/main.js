@@ -59,3 +59,8 @@ $('#contactUsButton').on('click', function() {
 		$('#contactUsEntries').show();
 	}
 })
+
+$('#contactUsChange').on('click', function() {
+	$('#hidingDiv').hide();
+	$('#contactUsEntries').hide();
+})
