@@ -1,4 +1,4 @@
-// AGE CONFIRMATION
+// AGE CONFIRMATION 
 
 // $('#confirmAgeContainer').show();
 // $('#hidingDiv').show();
@@ -34,30 +34,6 @@
 // Problem: when refresh, pop up shows for less than a second but it shouldn't be showing at all
 
 
-
-// SIGN UP MODAL
-$('#signUpContainer').hide();
-// $('#hidingDiv').hide();
-
-$('#signUpStartBtn').on('click', function() {
-	$('#hidingDiv').fadeIn('fast');
-	$('#signUpContainer').fadeIn('fast');
-})
-
-$('#signUpCancel').on('click', function(){
-	$('#hidingDiv').fadeOut('fast');
-	$('#signUpContainer').fadeOut('fast');
-})
-
-// $('#signUpBtn').on('click', function(e){
-// 	if (condition) {
-// 		// statement
-// 	}
-// })
-
-// ==> IN FORM: CODE OWN REQUIREMENTS
-
-
 // LOGIN MODAL
 $('#loginContainer').hide();
 
@@ -76,6 +52,22 @@ $('#loginSignUp').on('click', function() {
 	$('#signUpContainer').show();
 	$('#hidingDiv').show();
 })
+
+
+// SIGN UP MODAL
+$('#signUpContainer').hide();
+// $('#hidingDiv').hide();
+
+$('#signUpStartBtn').on('click', function() {
+	$('#hidingDiv').fadeIn('fast');
+	$('#signUpContainer').fadeIn('fast');
+})
+
+$('#signUpCancel').on('click', function(){
+	$('#hidingDiv').fadeOut('fast');
+	$('#signUpContainer').fadeOut('fast');
+})
+// ==> in form: code own requirements
 
 
 // CONTACT US - POPUP ENTRIES MESSAGE
