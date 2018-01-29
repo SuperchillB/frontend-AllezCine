@@ -39,3 +39,23 @@ $('#loginSignUp').on('click', function() {
 	$('#signUpContainer').show();
 	$('#hidingDiv').show();
 })
+
+
+// CONTACT US - POPUP ENTRIES MESSAGE
+$('#contactUsEntries').hide();
+
+$('#contactUsButton').on('click', function() {
+	let contactNames = $('#contactFirstnameInput').val() + ' ' + $('#contactLastnameInput').val();
+	let contactEmail = $('#contactEmailInput').val();
+	let contactSubject = $('#contactSubjectInput').val();
+	let contactMessage = $('#contactMessageInput').val();
+
+	if (contactNames !== '' && contactEmail !== '' && contactSubject !== '' && contactMessage !== '') {
+		$('#hidingDiv').show();
+		$('#contactUsName').text(contactNames);
+		$('#contactUsEmail').text(contactEmail);
+		$('#contactUsSubject').text(contactSubject);
+		$('#contactUsMessage').text(contactMessage);
+		$('#contactUsEntries').show();
+	}
+})

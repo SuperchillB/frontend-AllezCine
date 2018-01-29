@@ -775,28 +775,40 @@
           <form action="">
             <div class="d-flex flex-column align-items-center">
               <div class="col-sm-9 d-flex">
-                <div class="col-sm-6">
-                  <input required type="text" class="form-control" placeholder="FIRST NAME">
+                <div class="form-group col-sm-6">
+                  <input id="contactFirstnameInput" type="text" class="form-control" placeholder="FIRST NAME" required>
                 </div>
-                <div class="col-sm-6">
-                  <input required type="text" class="form-control" placeholder="LAST NAME">
-                </div>
-              </div>
-              <div class="col-sm-9 d-flex">
-                <div class="col-sm-6">
-                  <input required type="text" class="form-control" placeholder="EMAIL">
-                </div>
-                <div class="col-sm-6">
-                  <input required type="text" class="form-control" placeholder="SUBJECT">
+                <div class="form-group col-sm-6">
+                  <input id="contactLastnameInput" type="text" class="form-control" placeholder="LAST NAME" required>
                 </div>
               </div>
-              <div class="col-sm-9 text-center">
-                <textarea name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE"></textarea>
+              <div class="form-group col-sm-9 d-flex">
+                <div class="col-sm-6">
+                  <input id="contactEmailInput" type="email" class="form-control" placeholder="EMAIL" required>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input id="contactSubjectInput" type="text" class="form-control" placeholder="SUBJECT" required>
+                </div>
               </div>
-              <button class="btn btn-danger">SEND MESSAGE</button>
+              <div class="form-group col-sm-9 text-center">
+                <textarea id="contactMessageInput" name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE" required></textarea>
+              </div>
 
             </div>
           </form>
+          <button id="contactUsButton" class="btn btn-danger">SEND MESSAGE</button>
+          <div id="contactUsEntries">
+            <div class="d-flex flex-column">
+              <p id="contactUsName"></p>
+              <p id="contactUsEmail"></p>
+              <p id="contactUsSubject"></p>
+              <p id="contactUsMessage"></p>
+            </div>
+            <div class="d-flex">
+              <button id="contactUsSubmit" class="btn btn-primary">Confirm and Send</button>
+              <button id="contactUsChange" class="btn btn-secondary">Make Changes</button>
+            </div>
+          </div>
         </section>
 
 
