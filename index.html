@@ -43,19 +43,19 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#carouselExampleIndicators">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">MOVIES</a>
+                                <a class="nav-link" href="#featuredMovies">MOVIES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">TV SERIES</a>
+                                <a class="nav-link" href="#featuredTvSeries">TV SERIES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">SHOP MOVIES</a>
+                                <a class="nav-link" href="#shopMovies">SHOP MOVIES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact us</a>
+                                <a class="nav-link" href="#contactUs">Contact us</a>
                             </li>
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
@@ -180,11 +180,35 @@
         </header>
 
         <!-- SOCIAL MEDIA BUTTONS -->
-        <div id="socialMedia">
-          <div>Twitter <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
-          <div>Facebook <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-          <div>Dribble <a href=""><i class="fa fa-dribbble" aria-hidden="true"></i></a></div>
-          <div>Google+ <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></div>
+        <div id="socialMedia" class="position-fixed">
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Twitter 
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Facebook 
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Dribble 
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Google+ 
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
         </div>
 
         <!-- MAIN -->
@@ -242,7 +266,8 @@
             </div>
           </div>
         </section>
-        <section>
+
+        <section id="featuredMovies">
           <h1>FEATURED MOVIES</h1>
           <div>
             <button class="btn btn-danger">All</button>
@@ -377,7 +402,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="featuredTvSeries">
           <h1>FEATURES SERIES TV</h1>
           <div>
             <button class="btn btn-danger">All</button>
@@ -512,7 +537,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="shopMovies">
           <h1>SHOP MOVIES</h1>
           <div class="text-right">
             <button class="btn btn-dark"><</button>
@@ -626,7 +651,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="contactUs">
           <h1>CONTACT US</h1>
 
           <div class="d-flex justify-content-center align-items-center">
