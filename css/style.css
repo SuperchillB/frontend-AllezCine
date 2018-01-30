@@ -93,3 +93,16 @@
 .socialMedia i {
 	color: black;
 }
+
+
+/*section films*/
+.filmFlex {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.articleBox {
+	width: 200px;
+	margin: 10px;
+}
