@@ -248,12 +248,24 @@ function showFilm(jsonObj) {
     // console.log(document.getElementsByTagName('article')[0].id);
 
 		for(let i = 0, length1 = notAction.length; i < length1; i++){
-      for(let j = 0, length1 = document.getElementsByTagName('article').length; j < length1; j++){
-        if (document.getElementsByTagName('article')[j].id == notAction[i].id) {
-           document.getElementsByTagName('article')[j].style.display = 'none';
+			let moviesAll = $('#moviesAll').find("article");
+			$("#filmMoviesInvisible").show();
+      for(let j = 0, length1 = moviesAll.length; j < length1; j++){
+        if (moviesAll[j].id == notAction[i].id) {
+           moviesAll[j].style.display = 'none';
         }
 
       }
+			for (var k = 12; k < article.length; k++) {
+				document.getElementsByTagName('article')[k].style.display = 'none'; // !!!!!!!!!!!!! à arranger
+			}
+			$('article:nth-of-type(i)')
+			// for(let j = 0, length1 = document.getElementsByTagName('article').length; j < length1; j++){
+      //   if (document.getElementsByTagName('article')[j].id == notAction[i].id) {
+      //      document.getElementsByTagName('article')[j].style.display = 'none';
+      //   }
+      //
+      // }
     }
   })
 
