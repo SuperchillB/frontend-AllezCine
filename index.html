@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- CAROUSEL & JUMBOTRON -->
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -112,12 +112,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- LOGIN & SIGNUP BAR -->
             <div class="d-flex align-items-center">
                 <p><i class="fa fa-phone" aria-hidden="true"></i> (+000) 009 455 4088</p>
                 <button id="loginStartButton" type="button" class="btn btn-dark">LOGIN</button>
-                
+
                 <!-- LOGIN MODAL -->
                 <div id="loginContainer">
                     <div id="loginModal" class="d-flex flex-column justify-content-around align-items-center">
@@ -148,7 +148,7 @@
                 </div>
 
                 <button id="signUpStartBtn" type="button" class="btn btn-dark">SIGN UP</button>
-                
+
                 <!-- SIGNUP MODAL -->
                 <div id="signUpContainer">
                     <div id="signUpModal" class="d-flex flex-column justify-content-around align-items-center">
@@ -178,7 +178,7 @@
                 </div>
             </div>
         </header>
-        
+
         <!-- SOCIAL MEDIA BUTTONS -->
         <div id="socialMedia">
           <div>Twitter <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
@@ -628,32 +628,37 @@
 
         <section>
           <h1>CONTACT US</h1>
-          <div class="d-flex flex-column align-items-center">
-            <form action="" class="w-100">
-              <div class="d-flex flex-column align-items-center">
-                <div class="col-sm-9 d-flex">
-                  <div class="form-group col-sm-6">
-                    <input id="contactFirstnameInput" type="text" class="form-control" placeholder="FIRST NAME" required>
-                  </div>
-                  <div class="form-group col-sm-6">
-                    <input id="contactLastnameInput" type="text" class="form-control" placeholder="LAST NAME" required>
-                  </div>
-                </div>
-                <div class="form-group col-sm-9 d-flex">
-                  <div class="col-sm-6">
-                    <input id="contactEmailInput" type="email" class="form-control" placeholder="EMAIL" required>
-                  </div>
-                  <div class="form-group col-sm-6">
-                    <input id="contactSubjectInput" type="text" class="form-control" placeholder="SUBJECT" required>
-                  </div>
-                </div>
-                <div class="form-group col-sm-9 text-center">
-                  <textarea id="contactMessageInput" name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE" required></textarea>
-                </div>
 
-              </div>
-            </form>
-            <button id="contactUsButton" class="btn btn-danger">SEND MESSAGE</button>
+          <div class="d-flex justify-content-center align-items-center">
+            <div id="contactUsMap"></div>
+
+            <div class="d-flex flex-column align-items-center w-50">
+              <form action="" class="w-100">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="col-sm-9 d-flex">
+                    <div class="form-group col-sm-6">
+                      <input id="contactFirstnameInput" type="text" class="form-control" placeholder="FIRST NAME" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <input id="contactLastnameInput" type="text" class="form-control" placeholder="LAST NAME" required>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-9 d-flex">
+                    <div class="col-sm-6">
+                      <input id="contactEmailInput" type="email" class="form-control" placeholder="EMAIL" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <input id="contactSubjectInput" type="text" class="form-control" placeholder="SUBJECT" required>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-9 text-center">
+                    <textarea id="contactMessageInput" name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE" required></textarea>
+                  </div>
+
+                </div>
+              </form>
+              <button id="contactUsButton" class="btn btn-danger">SEND MESSAGE</button>
+            </div>
           </div>
 
           <div id="contactUsEntries">
@@ -670,9 +675,21 @@
               <button id="contactUsChange" class="btn btn-secondary">Make Changes</button>
             </div>
           </div>
+
+
         </section>
 
 
+<!-- COOKIE BOX -->
+        <div id="cookieBox">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="d-flex justify-content-around w-50 align-items-center">
+              <p class="mb-0">This website uses cookies to optimize your navigation.</p>
+              <a href="#">More Info</a>
+              <button id="cookieButton" class="btn">OK</button>
+            </div>
+          </div>
+        </div>
 
 
 
@@ -689,9 +706,7 @@
 
 
 
-
-
-
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVivygIzmFlOKVFhf3H0pGXel6i502SDk&callback=initMap"></script>
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -1,4 +1,4 @@
-// AGE CONFIRMATION 
+// AGE CONFIRMATION
 
 // $('#confirmAgeContainer').show();
 // $('#hidingDiv').show();
@@ -92,4 +92,25 @@ $('#contactUsButton').on('click', function() {
 $('#contactUsChange').on('click', function() {
 	$('#hidingDiv').hide();
 	$('#contactUsEntries').hide();
+})
+
+
+// CONTACT US - MAPS
+
+function initMap() {
+  let becode = {lat: 50.846033, lng: 4.3574682};
+  let map = new google.maps.Map(document.getElementById('contactUsMap'), {
+    zoom: 8,
+    center: becode
+  });
+  let marker = new google.maps.Marker({
+    position: becode,
+    map: map
+  });
+}
+
+// COOKIE BOX
+
+$('#cookieButton').on('click', function() {
+	$('#cookieBox').css("display", "none");
 })
