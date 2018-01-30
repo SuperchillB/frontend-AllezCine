@@ -32,24 +32,25 @@
 	})
 // });
 // Problem: when refresh, pop up shows for less than a second but it shouldn't be showing at all
+// USE THIS AS MODEL: https://thinkster.io/ionic-framework-tutorial (type localStorage in console to show modal)
 
 
 // LOGIN MODAL
 $('#loginContainer').hide();
 
 $('#loginStartButton').on('click', function() {
-	$('#hidingDiv').show();
-	$('#loginContainer').show();
+	$('#hidingDiv').fadeIn();
+	$('#loginContainer').fadeIn();
 })
 
 $('#loginCancel').on('click', function() {
-	$('#hidingDiv').hide();
-	$('#loginContainer').hide();
+	$('#hidingDiv').fadeOut();
+	$('#loginContainer').fadeOut();
 })
 
 $('#loginSignUp').on('click', function() {
 	$('#loginContainer').hide();
-	$('#signUpContainer').show();
+	$('#signUpContainer').fadeIn();
 	$('#hidingDiv').show();
 })
 
@@ -93,3 +94,15 @@ $('#contactUsChange').on('click', function() {
 	$('#hidingDiv').hide();
 	$('#contactUsEntries').hide();
 })
+
+
+// MENU LINKS SLIDE
+$(document).ready(function(){
+    $('a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
+      var target = this.hash;
+      $('html, body').animate({
+        'scrollTop': $(target).offset().top + (-50)
+      }, 600, 'swing');
+    });
+}); 
