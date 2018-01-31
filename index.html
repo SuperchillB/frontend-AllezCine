@@ -116,68 +116,71 @@
             </div>
 
             <!-- LOGIN & SIGNUP BAR -->
-            <div class="d-flex align-items-center">
-                <p><i class="fa fa-phone" aria-hidden="true"></i> (+000) 009 455 4088</p>
-                <button id="loginStartButton" type="button" class="btn btn-dark">LOGIN</button>
+            <div class="loginBars d-flex align-items-center">
+              <div class="d-flex align-items-center w-25 justify-content-around">
+                <p class="text-light mb-0"><i class="fa fa-phone" aria-hidden="true"></i> (+000) 009 455 4088</p>
+                <button id="loginStartButton" type="button" class="btn btn-black text-light">LOGIN</button>
 
                 <!-- LOGIN MODAL -->
                 <div id="loginContainer">
-                    <div id="loginModal" class="d-flex flex-column justify-content-around align-items-center">
-                        <div id="loginTitle">
-                          <h4>Log In</h4>
-                        </div>
-                        <form id="loginForm" class="d-flex flex-column">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="loginCheck">
-                                <label for="loginCheck" class="form-check-label">Stay connected</label>
-                            </div>
-                            <div class="form-group d-flex">
-                                <button id="loginButton" class="form-control btn btn-primary">Log In</button>
-                                <button id="loginSignUp" class="form-control btn btn-secondary">Sign up</button>
-                            </div>
-                            <div class="form-group">
-                                <a href="#">Forgot your password ?</a>
-                                <button id="loginCancel" class="btn btn-secondary">Cancel</button>
-                            </div>
-                        </form>
+                  <div id="loginModal" class="d-flex flex-column justify-content-around align-items-center">
+                    <div id="loginTitle">
+                      <h4>Log In</h4>
                     </div>
+                    <form id="loginForm" class="d-flex flex-column w-75">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="loginCheck">
+                        <label for="loginCheck" class="form-check-label">Stay connected</label>
+                      </div>
+                      <div class="form-group">
+                        <button id="loginButton" class="btn btn-danger">Log In</button>
+                        <button id="loginSignUp" class="btn btn-secondary">Sign up</button>
+                      </div>
+                      <div class="form-group">
+                        <a href="#" class="text-dark">Forgot your password ?</a>
+                        <button id="loginCancel" class="btn btn-secondary">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
 
-                <button id="signUpStartBtn" type="button" class="btn btn-dark">SIGN UP</button>
+                <button id="signUpStartBtn" type="button" class="btn btn-black text-light">SIGN UP</button>
 
                 <!-- SIGNUP MODAL -->
                 <div id="signUpContainer">
-                    <div id="signUpModal" class="d-flex flex-column justify-content-around align-items-center">
-                        <div id="signUpTitle">
-                            <h4>Sign Up</h4>
-                        </div>
-                        <form id="signUpForm" class="d-flex flex-column">
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="signUpEmail" placeholder="Email address" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm password" required>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="signUpConditions" required>
-                                <label class="form-check-label" for="signUpConditions">I read and accept the terms and conditions</label>
-                            </div>
-                            <div class="form-group">
-                                <button id="signUpBtn" class="btn btn-primary">Sign Up</button>
-                                <button id="signUpCancel" class="btn btn-secondary">Cancel</button>
-                            </div>
-                        </form>
+                  <div id="signUpModal" class="d-flex flex-column justify-content-around align-items-center">
+                    <div id="signUpTitle">
+                      <h4>Sign Up</h4>
                     </div>
+                    <form id="signUpForm" class="d-flex flex-column">
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="signUpEmail" placeholder="Email address" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm password" required>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="signUpConditions" required>
+                        <label class="form-check-label" for="signUpConditions">I read and accept the terms and conditions</label>
+                      </div>
+                      <div class="form-group">
+                        <button id="signUpBtn" class="btn btn-danger">Sign Up</button>
+                        <button id="signUpCancel" class="btn btn-secondary">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
+
+              </div>
             </div>
         </header>
 
@@ -216,7 +219,38 @@
 <!-- MAIN -->
         <!-- TOP TRENDS -->
         <section id="topTrends">
-          <div></div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center w-75">
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </section>
 
@@ -234,9 +268,284 @@
 
             <div id="moviesAll">
               <div id="filmMoviesVisible"></div>
-              <div id="filmMoviesInvisible"></div>
-              <div id="filmMoviesAction"></div>
-              
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-around flex-wrap">
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <div id="filmMoviesInvisible">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-around flex-wrap">
+
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div id="filmMoviesAction">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-around flex-wrap">
+
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Cat Attack</h5>
+                        <p class="card-text">2018</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
 
 
@@ -246,7 +555,7 @@
           </div>
 
         </section>
-        
+
         <!-- FEATURED TV SERIES -->
         <section id="featuredTvSeries">
           <h1>FEATURES SERIES TV</h1>
@@ -261,7 +570,7 @@
             <button class="btn danger">MORE FILMS</button>
           </div>
         </section>
-        
+
         <!-- SHOP MOVIES -->
         <section id="shopMovies">
           <h1>SHOP MOVIES</h1>
@@ -376,7 +685,7 @@
             </div>
           </div>
         </section>
-        
+
         <!-- CONTACT US -->
         <section id="contactUs">
           <h1>CONTACT US</h1>
