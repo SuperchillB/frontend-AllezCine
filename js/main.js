@@ -246,20 +246,24 @@ function showFilm(jsonObj) {
     console.log(notAction);
     // console.log(notAction[0].id);
     // console.log(document.getElementsByTagName('article')[0].id);
+		let noAction12 = notAction.slice(0, 12);
+		console.log(noAction12)
 
 		for(let i = 0, length1 = notAction.length; i < length1; i++){
 			let moviesAll = $('#moviesAll').find("article");
 			$("#filmMoviesInvisible").show();
+			let k = 12;
       for(let j = 0, length1 = moviesAll.length; j < length1; j++){
         if (moviesAll[j].id == notAction[i].id) {
            moviesAll[j].style.display = 'none';
         }
-
       }
-			for (var k = 12; k < article.length; k++) {
-				document.getElementsByTagName('article')[k].style.display = 'none'; // !!!!!!!!!!!!! à arranger
-			}
-			$('article:nth-of-type(i)')
+
+			// for (var k = 12; k < $("#filmMoviesInvisible").length; k++) {
+			// 	document.getElementsByTagName('article:nth-of-type(k)').style.display = 'none';
+      //
+      //
+			// }
 			// for(let j = 0, length1 = document.getElementsByTagName('article').length; j < length1; j++){
       //   if (document.getElementsByTagName('article')[j].id == notAction[i].id) {
       //      document.getElementsByTagName('article')[j].style.display = 'none';
@@ -268,5 +272,4 @@ function showFilm(jsonObj) {
       // }
     }
   })
-
 }
