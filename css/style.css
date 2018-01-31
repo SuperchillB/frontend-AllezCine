@@ -207,3 +207,9 @@ h1 span {
 	right: 40px;
 	z-index: 1000;
 }
+
+
+/* ____________________________ FOOTER ____________________________ */
+.bg-black {
+	background-color: black;
+}
