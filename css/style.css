@@ -67,6 +67,20 @@ h1 span {
 	color: red;
 }
 
+
+				/* ____________________________ LOGIN ____________________________ */
+
+.loginBars {
+	background-color: red;
+	padding-left: 20px;
+	height: 60px;
+}
+
+.btn-black {
+	background-color: black;
+	border-radius: 0;
+}
+
 				/* ____________________________ MODALS ____________________________ */
 
 #signUpModal, #loginModal, #contactUsEntries {
@@ -115,13 +129,13 @@ h1 span {
 }*/
 
 
-/*maps*/
+				/* ____________________________ MAPS ____________________________ */
 #contactUsMap {
 	width : 300px;
 	height : 380px;
 }
 
-/*cookie box*/
+				/* ____________________________ COOKIES ____________________________ */
 #cookieBox {
 	width: 100%;
 	height: 80px;
@@ -132,7 +146,7 @@ h1 span {
 }
 
 
-/*SOCIAL MEDIA BUTTONS*/
+				/* ____________________________ SOCIAL MEDIA BUTTONS ____________________________ */
 #socialMedia {
 	position: fixed;
 	top: 50%;
@@ -168,11 +182,16 @@ h1 span {
 }
 
 
-/*section films*/
+				/* ____________________________ FILM SECTIONS ____________________________ */
 .filmFlex {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+}
+
+.card {
+	width: 200px;
+	margin: 10px 10px 10px 10px;
 }
 
 .articleBox {
