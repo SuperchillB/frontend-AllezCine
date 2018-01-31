@@ -127,6 +127,24 @@ $(document).ready(function(){
     });
 });
 
+
+//BUTTON UP SLIDE
+$('#buttonUp').hide();
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 400) {
+		$('#buttonUp').fadeIn();
+	} else {
+		$('#buttonUp').fadeOut();
+	}
+})
+
+$('#buttonUp').on('click', function () {
+		$('html, body').animate({
+			scrollTop:0
+		}, 500, 'swing');
+})
+
 // NAVBAR SOLID BACKGROUND ON SCROLL
 function checkScroll(){
     var startY = $('.navbar').height() * 2; //The point where the navbar changes in px

@@ -143,6 +143,7 @@ h1 span {
 	position: fixed;
 	bottom: 0;
 	padding-top: 20px;
+	z-index: 1001;
 }
 
 
@@ -197,4 +198,12 @@ h1 span {
 .articleBox {
 	width: 200px;
 	margin: 10px;
+}
+
+/* ____________________________ BUTTON UP ____________________________ */
+.btnUpper {
+	position: fixed;
+	bottom: 30px;
+	right: 40px;
+	z-index: 1000;
 }
