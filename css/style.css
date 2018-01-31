@@ -1,10 +1,82 @@
+				/* ____________________________ NAVBAR ____________________________ */
+
+/*Navbar brand styling*/
+	.navbar-brand {
+		font-size: 40px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		margin: 10px 40px 0 40px;
+	}
+	.navbar-brand span {
+		color: red;
+	}
+/*Change navbar background on scroll (see JS)*/
+	.navbar {
+	    -webkit-transition: all 0.6s ease-out;
+	    -moz-transition: all 0.6s ease-out;
+	    -o-transition: all 0.6s ease-out;
+	    -ms-transition: all 0.6s ease-out;
+	    transition: all 0.6s ease-out;
+	}
+	.navbar.scrolled {
+	    background: rgb(68, 68, 68);
+	    background: rgba(0, 0, 0, 0.78);
+	}
+/*Navbar links styling*/
+	.nav-link {
+		color: white !important;
+	}
+	#navbarSupportedContent ul {
+		font-size: 12px;
+	}
+	#navbarSupportedContent ul li:nth-child(1) a {
+		color: red !important;
+		margin-right: 10px;
+	}
+	#navbarSupportedContent ul li:nth-child(2), #navbarSupportedContent ul li:nth-child(3), #navbarSupportedContent ul li:nth-child(4) {
+		background-color: rgba(255, 50, 50, 0.7);
+		margin-right: 5px;
+	}
+	#navbarSupportedContent ul li:nth-child(5) {
+		margin-left: 40px;
+	}
+/*Navbar search bar styling*/
+#navbarSupportedContent form i {
+	position: relative;
+	color: white;
+	float: right;
+	margin-left: -35px;
+}
+#navbarSupportedContent input {
+	background-color: rgba(0, 0, 0, 0.7);
+	border: none;
+	border-radius: 20px;
+	height: 30px;
+	width: 230px !important;
+	padding-right: 30px;
+}
+
+				/* ____________________________ JUMBOTRON ____________________________ */
+
+#carouselExampleIndicators h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 40px;
+}
+h1 span {
+	color: red;
+}
+
+				/* ____________________________ MODALS ____________________________ */
+
 #signUpModal, #loginModal, #contactUsEntries {
 	height: 300px;
 	width: 400px;
 	background-color: #fff;
 	border: 2px solid red;
-	position: absolute;
 	left: 50%;
+	top: 20%;
+	position: fixed;
 	margin-left: -200px;
 	box-shadow: 0px 0px 150px 0px black;
 	z-index: 3000;
@@ -14,9 +86,10 @@
 	height: 200px;
 	width: 400px;
 	background-color: #fff;
-	border: 2px solid black;
-	position: absolute;
+	border: 1px solid grey;
+	position: fixed;
 	left: 50%;
+	top: 20%;
 	margin-left: -200px;
 	box-shadow: 0px 0px 150px 0px black;
 	z-index: 3000;
@@ -25,7 +98,7 @@
 #hidingDiv {
 	height:100vh;
 	width: 100vw;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(255, 255, 255, 0.5);
 	position: fixed;
 	margin: 0;
 	padding: 0;

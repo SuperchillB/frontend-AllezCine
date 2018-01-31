@@ -122,10 +122,27 @@ $(document).ready(function(){
       e.preventDefault();
       var target = this.hash;
       $('html, body').animate({
-        'scrollTop': $(target).offset().top + (-50)
+        'scrollTop': $(target).offset().top + (-90)
       }, 600, 'swing');
     });
 });
+
+// NAVBAR SOLID BACKGROUND ON SCROLL
+function checkScroll(){
+    var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+    if($(window).scrollTop() > startY){
+        $('.navbar').addClass("scrolled");
+    }else{
+        $('.navbar').removeClass("scrolled");
+    }
+}
+if($('.navbar').length > 0){
+    $(window).on("scroll load resize", function(){
+        checkScroll();
+    });
+}
+
 
 
 
