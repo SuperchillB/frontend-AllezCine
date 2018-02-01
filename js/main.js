@@ -4,32 +4,32 @@
 // $('#hidingDiv').show();
 
 // $('#confirmAgeBtn').on('click', function() {
-// 	$('#hidingDiv').hide();
-// 	$('#confirmAgeContainer').hide();
+//  $('#hidingDiv').hide();
+//  $('#confirmAgeContainer').hide();
 // })
 
 // $('#signUpCancel').on('click', function(){
-// 	$('#hidingDiv').hide();
-// 	$('#confirmAgeContainer').hide();
+//  $('#hidingDiv').hide();
+//  $('#confirmAgeContainer').hide();
 // })
 // Problem: code above works but pop up keeps appearing on each refresh
 
 // $(document).ready(function() {
-	let popState = localStorage.getItem('popState');
+    let popState = localStorage.getItem('popState');
     if(popState != 'shown'){
         $('#confirmAgeContainer').show();
         $('#hidingDiv').show();
         // localStorage.setItem('popState','shown')
     } else {
-    	$('#confirmAgeContainer').hide();
+        $('#confirmAgeContainer').hide();
         $('#hidingDiv').hide();
     }
 
     $('#confirmAgeBtn').on('click', function() {
-		$('#hidingDiv').fadeOut('fast');
-		$('#confirmAgeContainer').fadeOut('fast');
-		localStorage.setItem('popState','shown');
-	})
+        $('#hidingDiv').fadeOut('fast');
+        $('#confirmAgeContainer').fadeOut('fast');
+        localStorage.setItem('popState','shown');
+    })
 // });
 // Problem: when refresh, pop up shows for less than a second but it shouldn't be showing at all
 // USE THIS AS MODEL: https://thinkster.io/ionic-framework-tutorial (type localStorage in console to show modal)
@@ -39,19 +39,19 @@
 $('#loginContainer').hide();
 
 $('#loginStartButton').on('click', function() {
-	$('#hidingDiv').fadeIn();
-	$('#loginContainer').fadeIn();
+    $('#hidingDiv').fadeIn();
+    $('#loginContainer').fadeIn();
 })
 
 $('#loginCancel').on('click', function() {
-	$('#hidingDiv').fadeOut();
-	$('#loginContainer').fadeOut();
+    $('#hidingDiv').fadeOut();
+    $('#loginContainer').fadeOut();
 })
 
 $('#loginSignUp').on('click', function() {
-	$('#loginContainer').hide();
-	$('#signUpContainer').fadeIn();
-	$('#hidingDiv').show();
+    $('#loginContainer').hide();
+    $('#signUpContainer').fadeIn();
+    $('#hidingDiv').show();
 })
 
 
@@ -60,13 +60,13 @@ $('#signUpContainer').hide();
 // $('#hidingDiv').hide();
 
 $('#signUpStartBtn').on('click', function() {
-	$('#hidingDiv').fadeIn('fast');
-	$('#signUpContainer').fadeIn('fast');
+    $('#hidingDiv').fadeIn('fast');
+    $('#signUpContainer').fadeIn('fast');
 })
 
 $('#signUpCancel').on('click', function(){
-	$('#hidingDiv').fadeOut('fast');
-	$('#signUpContainer').fadeOut('fast');
+    $('#hidingDiv').fadeOut('fast');
+    $('#signUpContainer').fadeOut('fast');
 })
 // ==> in form: code own requirements
 
@@ -75,61 +75,59 @@ $('#signUpCancel').on('click', function(){
 $('#contactUsEntries').hide();
 
 $('#contactUsButton').on('click', function() {
-	let contactNames = $('#contactFirstnameInput').val() + ' ' + $('#contactLastnameInput').val();
-	let contactEmail = $('#contactEmailInput').val();
-	let contactSubject = $('#contactSubjectInput').val();
-	let contactMessage = $('#contactMessageInput').val();
+    let contactNames = $('#contactFirstnameInput').val() + ' ' + $('#contactLastnameInput').val();
+    let contactEmail = $('#contactEmailInput').val();
+    let contactSubject = $('#contactSubjectInput').val();
+    let contactMessage = $('#contactMessageInput').val();
 
-	if (contactNames !== '' && contactEmail !== '' && contactSubject !== '' && contactMessage !== '') {
-		$('#hidingDiv').show();
-		$('#contactUsName').text(contactNames);
-		$('#contactUsEmail').text(contactEmail);
-		$('#contactUsSubject').text(contactSubject);
-		$('#contactUsMessage').text(contactMessage);
-		$('#contactUsEntries').show();
-	}
+    if (contactNames !== '' && contactEmail !== '' && contactSubject !== '' && contactMessage !== '') {
+        $('#hidingDiv').show();
+        $('#contactUsName').text(contactNames);
+        $('#contactUsEmail').text(contactEmail);
+        $('#contactUsSubject').text(contactSubject);
+        $('#contactUsMessage').text(contactMessage);
+        $('#contactUsEntries').show();
+    }
 })
 
 $('#contactUsChange').on('click', function() {
-	$('#hidingDiv').hide();
-	$('#contactUsEntries').hide();
+    $('#hidingDiv').hide();
+    $('#contactUsEntries').hide();
 })
 
 // CONTACT US - MAPS
-
 function initMap() {
-  let becode = {lat: 50.846033, lng: 4.3574682};
-  let map = new google.maps.Map(document.getElementById('contactUsMap'), {
-    zoom: 8,
-    center: becode
-  });
-  let marker = new google.maps.Marker({
-    position: becode,
-    map: map
-  });
+    let becode = {lat: 50.846033, lng: 4.3574682};
+    let map = new google.maps.Map(document.getElementById('contactUsMap'), {
+        zoom: 8,
+        center: becode
+    });
+    let marker = new google.maps.Marker({
+        position: becode,
+        map: map
+    });
 }
 
 // COOKIE BOX
-
 $('#cookieButton').on('click', function() {
-	$('#cookieBox').css("display", "none");
+    $('#cookieBox').css("display", "none");
 })
 
 
 // MENU LINKS SLIDE
 $(document).ready(function(){
     $('a[href^="#"]').on('click', function (e) {
-      e.preventDefault();
-      var target = this.hash;
-      $('html, body').animate({
-        'scrollTop': $(target).offset().top + (-90)
-      }, 600, 'swing');
+        e.preventDefault();
+        var target = this.hash;
+        $('html, body').animate({
+          'scrollTop': $(target).offset().top + (-90)
+        }, 600, 'swing');
     });
 });
 
 // NAVBAR SOLID BACKGROUND ON SCROLL
 function checkScroll(){
-    var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+    var startY = $('.navbar').height() * 2;
 
     if($(window).scrollTop() > startY){
         $('.navbar').addClass("scrolled");
@@ -148,145 +146,157 @@ if($('.navbar').length > 0){
 
 
 //FILMS
-
-//
 // let apikey = "908e84944eac33ec8410b6162aa0f393"
-
-
-
-var titre = document.querySelector('#titre');
-var section = document.querySelector('section');
-
-
-
-
 var requestURL = "https://quentinclaes.github.io/allezcine/movie.json";
-
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-  var superHeroes = request.response;
-  showFilm(superHeroes);
+    var superHeroes = request.response;
+    showFilm(superHeroes);
 }
 
 function showFilm(jsonObj) {
-  let film = jsonObj['results'];
+    let film = jsonObj['results'];
 
-  for(var i = 0; i < 12; i++) {
+    let fillCard = $('#moviesAll .card');
+    let fillImg = $('#moviesAll .card-img-top');
+    let fillTitle = $('#moviesAll .card-title');
+    let fillText = $('#moviesAll .card-text');
 
-		let myArticle = document.createElement('article');
-		let myH2 = document.createElement('h5');
-		let myPara1 = document.createElement('p');
-		let myPara2 = document.createElement('p');
-		// let myPara3 = document.createElement('p');
-		// let myList = document.createElement('ul');
-		let myimg = document.createElement('img');
-    myH2.textContent = film[i].title;
-    // myPara1.textContent = 'Overview: ' + film[i].overview;
-    myPara2.textContent = film[i].release_date;
-    // myPara3.textContent = 'Superpowers:';
-    myimg.src ='http://image.tmdb.org/t/p/w185' + film[i].backdrop_path;
+    let counter = 0;
 
-		$("#filmMoviesVisible").addClass("filmFlex");
-		myArticle.classList.add("articleBox")
-    myArticle.appendChild(myimg);
-    myArticle.appendChild(myH2);
-    myArticle.appendChild(myPara1);
-    myArticle.appendChild(myPara2);
-    // myArticle.appendChild(myPara3);
-
-    // myArticle.appendChild(myList);
-
-    // section.appendChild(myArticle);
-		// $("#topTrends").append(myArticle);
-
-		$("#filmMoviesVisible").append(myArticle);
-		// $("#featuredTvSeries").append(myArticle);
-    myArticle.id = film[i].id; // CREATE ID FOR EACH ARTICLE CREATED
-
-
-  }
-
-	for(var i = 12; i < film.length; i++) {
-
-		let myArticle = document.createElement('article');
-		let myH2 = document.createElement('h5');
-		let myPara1 = document.createElement('p');
-		let myPara2 = document.createElement('p');
-		// let myPara3 = document.createElement('p');
-		// let myList = document.createElement('ul');
-		let myimg = document.createElement('img');
-    myH2.textContent = film[i].title;
-    // myPara1.textContent = 'Overview: ' + film[i].overview;
-    myPara2.textContent = film[i].release_date;
-    // myPara3.textContent = 'Superpowers:';
-    myimg.src ='http://image.tmdb.org/t/p/w185' + film[i].backdrop_path;
-
-		$("#filmMoviesInvisible").addClass("filmFlex");
-		myArticle.classList.add("articleBox")
-    myArticle.appendChild(myimg);
-    myArticle.appendChild(myH2);
-    myArticle.appendChild(myPara1);
-    myArticle.appendChild(myPara2);
-    // myArticle.appendChild(myPara3);
-
-    // myArticle.appendChild(myList);
-
-    // section.appendChild(myArticle);
-		// $("#topTrends").append(myArticle);
-
-		$("#filmMoviesInvisible").append(myArticle);
-		// $("#featuredTvSeries").append(myArticle);
-    myArticle.id = film[i].id; // CREATE ID FOR EACH ARTICLE CREATED
-
-		$("#filmMoviesInvisible").hide();
-
-  }
-
-	$('#moviesButton').on('click', function() {
-		$("#filmMoviesInvisible").show();
-	})
-
-
-
-  $('#btn-action').on('click',function(){
-    let notAction = [];
-
-    for (var i = 0; i < jsonObj['results'].length; i++) {
-      if (jsonObj['results'][i]['genre_ids'].indexOf(28) === -1) {
-        notAction.push(jsonObj['results'][i]);
-      }
+    for(let i = 0, length1 = fillCard.length; i < length1; i++){
+        fillTitle[i].textContent = film[counter].title;
+        fillText[i].textContent = film[counter].release_date;
+        fillImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[counter].backdrop_path;
+        fillCard[i].id = film[counter].id; // CREATE ID FOR EACH ARTICLE CREATED
+        counter++;
     }
-    console.log(notAction);
-    // console.log(notAction[0].id);
-    // console.log(document.getElementsByTagName('article')[0].id);
-		let noAction12 = notAction.slice(0, 12);
-		console.log(noAction12)
 
-		for(let i = 0, length1 = notAction.length; i < length1; i++){
-			let moviesAll = $('#moviesAll').find("article");
-			$("#filmMoviesInvisible").show();
-			let k = 12;
-      for(let j = 0, length1 = moviesAll.length; j < length1; j++){
-        if (moviesAll[j].id == notAction[i].id) {
-           moviesAll[j].style.display = 'none';
+    // FILTER ALL MOVIES
+    $('#btn-all').on('click',function(){
+        actionClicked = false;
+        thrillerClicked = false;
+        sciFiClicked = false;
+        fillCard.show();
+        $("#filmMoviesInvisible").hide();
+    })
+
+    // FILTER ACTION MOVIES
+    let actionClicked = false;
+    $('#btn-action').on('click',function(e){
+        thrillerClicked = false;
+        sciFiClicked = false;
+        fillCard.show();
+        actionClicked = true;
+        let notAction = [];
+        for (var i = 0; i < jsonObj['results'].length; i++) {
+            if (jsonObj['results'][i]['genre_ids'].indexOf(28) === -1) {
+                notAction.push(jsonObj['results'][i]);
+            }
         }
-      }
+        // console.log(notAction); // returns array of non action movies
+        for(let i = 0, length1 = notAction.length; i < length1; i++){
+            for(let j = 0, length1 = fillCard.length; j < length1; j++){
+                if (fillCard[j].id == notAction[i].id) {
+                    fillCard[j].style.display = 'none';
+                }
+            }
+        }
+        $("#filmMoviesInvisible").show();
+    })
 
-			// for (var k = 12; k < $("#filmMoviesInvisible").length; k++) {
-			// 	document.getElementsByTagName('article:nth-of-type(k)').style.display = 'none';
-      //
-      //
-			// }
-			// for(let j = 0, length1 = document.getElementsByTagName('article').length; j < length1; j++){
-      //   if (document.getElementsByTagName('article')[j].id == notAction[i].id) {
-      //      document.getElementsByTagName('article')[j].style.display = 'none';
-      //   }
-      //
-      // }
-    }
-  })
+    // FILTER THRILLER MOVIES (number 53)
+    let thrillerClicked = false; // TO BE USED LATER BELOW IN SHOW MORE/LESS BUTTON CODE
+    $('#btn-thriller').on('click',function(e){
+        actionClicked = false;
+        sciFiClicked = false;
+        fillCard.show();
+        thrillerClicked = true; // TO BE USED LATER BELOW IN SHOW MORE/LESS BUTTON CODE
+        let notThriller = [];
+        for (var i = 0; i < jsonObj['results'].length; i++) {
+            if (jsonObj['results'][i]['genre_ids'].indexOf(53) === -1) {
+                notThriller.push(jsonObj['results'][i]);
+            }
+        }
+        // console.log(notThriller); 
+        for(let i = 0, length1 = notThriller.length; i < length1; i++){
+            for(let j = 0, length1 = fillCard.length; j < length1; j++){
+                if (fillCard[j].id == notThriller[i].id) {
+                    fillCard[j].style.display = 'none';
+                }
+            }
+        }
+        $("#filmMoviesInvisible").show();
+    })
+
+
+    // FILTER SCI-FI MOVIES (number 878)
+    let sciFiClicked = false; // TO BE USED LATER BELOW IN SHOW MORE/LESS BUTTON CODE
+    $('#btn-scifi').on('click',function(e){
+        actionClicked = false;
+        thrillerClicked = false;
+        fillCard.show();
+        sciFiClicked = true; // TO BE USED LATER BELOW IN SHOW MORE/LESS BUTTON CODE
+        let notSciFi = [];
+        for (var i = 0; i < jsonObj['results'].length; i++) {
+            if (jsonObj['results'][i]['genre_ids'].indexOf(878) === -1) {
+                notSciFi.push(jsonObj['results'][i]);
+            }
+        }
+        // console.log(notSciFi);
+        for(let i = 0, length1 = notSciFi.length; i < length1; i++){
+            for(let j = 0, length1 = fillCard.length; j < length1; j++){
+                if (fillCard[j].id == notSciFi[i].id) {
+                    fillCard[j].style.display = 'none';
+                }
+            }
+        }
+        $("#filmMoviesInvisible").show();
+    })
+
+
+    // HIDE INVISIBLE MOVIES
+    $("#filmMoviesInvisible").hide();
+
+    // SHOW MORE/LESS BUTTON
+    let moviesButtonClicked = false;
+    $('#moviesButton').on('click', function(e) {
+        if (actionClicked == true || thrillerClicked == true || sciFiClicked == true) {
+            e.preventDefault();
+        } else {
+            if (moviesButtonClicked == false) {
+                $("#filmMoviesInvisible").slideDown( "slow", function() {
+                    $(this).show();
+                });
+                $(this).text('SHOW LESS');
+                moviesButtonClicked = true;
+            } else {
+                $("#filmMoviesInvisible").slideUp( "slow", function() {
+                    $(this).hide();
+                })
+                $(this).text('MORE MOVIES');
+                moviesButtonClicked = false;
+            }
+        }
+    })
+    // OR
+    // $('#moviesButton').on('click', function() {
+    //   if (moviesButtonClicked == false) { 
+    //     for(let i = 12, length1 = fillCard.length; i < length1; i++){
+    //       fillCard[i].style.display = "block";
+    //     }
+    //     moviesBtn.text('SHOW LESS');
+    //     moviesButtonClicked = true;
+    //   } else {
+    //     for(let i = 12, length1 = fillCard.length; i < length1; i++){
+    //       fillCard[i].style.display = "none";
+    //     }
+    //     moviesBtn.text('MORE MOVIES');
+    //     moviesButtonClicked = false;
+    //   }
+    // });
 }
