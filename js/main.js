@@ -188,7 +188,7 @@ function showFilm(jsonObj) {
 
     for(let i = 0, length1 = fillCard.length; i < length1; i++){
         fillTitle[i].textContent = film[counter].title;
-        fillText[i].textContent = film[counter].release_date;
+        fillText[i].textContent = film[counter].release_year;
         fillImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[counter].poster_path;
         fillCard[i].id = film[counter].id; // CREATE ID FOR EACH ARTICLE CREATED
         counter++;
@@ -303,6 +303,85 @@ function showFilm(jsonObj) {
     })
 
 
+		// SHOP MOVIES LEFT
+		let shopMovies = $('#shopMovies .card');
+		let shopMoviesImg = $('#shopMovies img');
+		let shopMoviesTitle = $('#shopMovies .card-title');
+		let shopMoviesText = $('#shopMovies .card-text');
+
+		let more = 0;
+
+		for(let i = 0, length1 = shopMovies.length; i < length1; i++){
+				shopMoviesImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[more].poster_path;
+        shopMoviesTitle[i].textContent = film[more].title;
+				shopMoviesText[i].textContent = film[more].release_year;
+        shopMovies[i].id = film[more].id; // CREATE ID FOR EACH ARTICLE CREATED
+        more++;
+    }
+
+
+		// SHOP MOVIES RIGHT
+		let movieCarousel = $('#movieCarousel .shopVideos li');
+		let movieCarouselIframe = $('#movieCarousel iframe');
+		let movieCarouselTitle = $('#movieCarousel .card-title');
+		let movieCarouselDescription = $('#movieCarousel .shopDescription');
+		let movieCarouselDate = $('#movieCarousel .shopDate');
+		let movieCarouselGenre = $('#movieCarousel .shopGenre');
+
+		for (var i = 0; i < movieCarousel.length; i++) {
+			movieCarouselIframe[i].src = 'https://www.youtube.com/embed/'+ film[more].youtube;
+			movieCarouselTitle[i].textContent = film[more].title;
+			movieCarouselDescription[i].textContent = film[more].overview;
+			movieCarouselDate[i].textContent = film[more].release_year;
+			movieCarousel[i].id = film[more].id; // CREATE ID FOR EACH ARTICLE CREATED
+			more++;
+			console.log('hello')
+		}
+
+
+
+		let carouselWidth = $('#movieCarousel ul li').first().children('iframe').width();
+		let carouselCount = $('#movieCarousel ul').children('li').length;
+		let currentVideo = 0;
+
+		$('#movieCarousel ul').css('width', carouselWidth*carouselCount);
+
+		let transition = function (currentVideoElement, carouselWidthElement) {
+			let pxValue = -(currentVideoElement-1) * carouselWidthElement;
+			$('#movieCarousel ul').animate({
+				left:pxValue
+			});
+		}
+
+		$('#shopMoviesNext').on('click', function () {
+			if (currentVideo === carouselCount) {
+				currentVideo = 1;
+				transition(currentVideo, carouselWidth);
+			} else {
+				currentVideo++;
+				transition(currentVideo, carouselWidth);
+			}
+		})
+
+		$('#shopMoviesPrev').on('click', function () {
+			clearTimeout(slideshow);
+			slideshow = null;
+			if (currentVideo === 1) {
+				currentVideo = carouselCount;
+				transition(currentVideo, carouselWidth);
+			} else {
+				currentVideo--;
+				transition(currentVideo, carouselWidth);
+			}
+		})
+
+		let slideshow = function() {
+				$('#next').click();
+				setTimeout(slideshow, 2000);
+			}
+
+			slideshow();
+
 		// FOOTER MOVIES LATEST MOVIES
     let latestMovies = $('#latestMovies div');
     let latestMoviesImg = $('#latestMovies img');
@@ -322,9 +401,7 @@ function showFilm(jsonObj) {
     let footerAllezcine = $('#footerAllezcine div');
     let footerAllezcineImg = $('#footerAllezcine img');
 
-    let counting = 0;
-
-    let randomImage = Math.floor(Math.random()*30);
+		let randomImage = Math.floor(Math.random()*24);
 
     for(let m = 0, length1 = footerAllezcine.length; m < length1; m++){
         footerAllezcineImg[m].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].poster_path;
@@ -374,7 +451,7 @@ function showFilm(jsonObj) {
 
 //     for(let i = 0, length1 = fillCard.length; i < length1; i++){
 //         fillTitle[i].textContent = film[counter].title;
-//         fillText[i].textContent = film[counter].release_date;
+//         fillText[i].textContent = film[counter].release_year;
 //         fillImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[counter].backdrop_path;
 //         fillCard[i].id = film[counter].id; // CREATE ID FOR EACH ARTICLE CREATED
 //         counter++;
@@ -426,7 +503,7 @@ function showFilm(jsonObj) {
 //                 notThriller.push(jsonObj['results'][i]);
 //             }
 //         }
-//         // console.log(notThriller); 
+//         // console.log(notThriller);
 //         for(let i = 0, length1 = notThriller.length; i < length1; i++){
 //             for(let j = 0, length1 = fillCard.length; j < length1; j++){
 //                 if (fillCard[j].id == notThriller[i].id) {
@@ -489,7 +566,7 @@ function showFilm(jsonObj) {
 //     })
 //     // OR
 //     // $('#moviesButton').on('click', function() {
-//     //   if (moviesButtonClicked == false) { 
+//     //   if (moviesButtonClicked == false) {
 //     //     for(let i = 12, length1 = fillCard.length; i < length1; i++){
 //     //       fillCard[i].style.display = "block";
 //     //     }

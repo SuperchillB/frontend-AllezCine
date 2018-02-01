@@ -204,6 +204,35 @@ h1 span {
 	margin: 10px;
 }
 
+
+/* ____________________________ SHOP MOVIES ____________________________ */
+#shopMovies .card {
+	width: 160px;
+	margin: 10px 10px 10px 10px;
+}
+
+#movieCarousel {
+	width: 600px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#movieCarousel ul .shopVideos{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+#movieCarousel ul li {
+	float: left;
+	list-style: none;
+}
+
 /* ____________________________ BUTTON UP ____________________________ */
 .btnUpper {
 	position: fixed;
