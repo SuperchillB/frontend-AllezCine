@@ -1,0 +1,864 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>AllezCine</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <script src="https://use.fontawesome.com/b04ca2f55a.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="testMovies.css">
+        <link href="https://fonts.googleapis.com/css?family=Cantarell|Roboto:400,700,900" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="hidingDiv"></div>
+
+        <header>
+            <!-- CONFIRM AGE POP UP -->
+            <div id="confirmAgeContainer">
+                <div id="confirmAgeModal" class="d-flex flex-column justify-content-around align-items-center">
+                    <h3>Age verification</h3>
+                    <p>Please verify your age to enter</p>
+                    <div>
+                        <button id="confirmAgeBtn">I am 18 or older</button>
+                        <a href="http://www.imdb.com/"><button>I am under 18</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAROUSEL & JUMBOTRON -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                    <a class="navbar-brand" href="#"><span>ALLEZ</span>CINE!</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#carouselExampleIndicators">HOME <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#featuredMovies">MOVIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#featuredTvSeries">TV SERIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#shopMovies">SHOP MOVIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contactUs">CONTACT US</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </form>
+                    </div>
+                </nav>
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>MO</span>VIES</h1>
+                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>TV</span> SERIES</h1>
+                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>MO</span>VIES</h1>
+                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="Fourth slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>TV</span> SERIES</h1>
+                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOGIN & SIGNUP BAR -->
+            <div class="loginBars d-flex align-items-center">
+              <div class="d-flex align-items-center w-25 justify-content-around">
+                <p class="text-light mb-0"><i class="fa fa-phone" aria-hidden="true"></i> (+000) 009 455 4088</p>
+                <button id="loginStartButton" type="button" class="btn btn-black text-light">LOGIN</button>
+
+                <!-- LOGIN MODAL -->
+                <div id="loginContainer">
+                  <div id="loginModal" class="d-flex flex-column justify-content-around align-items-center">
+                    <div id="loginTitle">
+                      <h4>Log In</h4>
+                    </div>
+                    <form id="loginForm" class="d-flex flex-column w-75">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="loginCheck">
+                        <label for="loginCheck" class="form-check-label">Stay connected</label>
+                      </div>
+                      <div class="form-group">
+                        <button id="loginButton" class="btn btn-danger">Log In</button>
+                        <button id="loginSignUp" class="btn btn-secondary">Sign up</button>
+                      </div>
+                      <div class="form-group">
+                        <a href="#" class="text-dark">Forgot your password ?</a>
+                        <button id="loginCancel" class="btn btn-secondary">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <button id="signUpStartBtn" type="button" class="btn btn-black text-light">SIGN UP</button>
+
+                <!-- SIGNUP MODAL -->
+                <div id="signUpContainer">
+                  <div id="signUpModal" class="d-flex flex-column justify-content-around align-items-center">
+                    <div id="signUpTitle">
+                      <h4>Sign Up</h4>
+                    </div>
+                    <form id="signUpForm" class="d-flex flex-column">
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="signUpEmail" placeholder="Email address" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm password" required>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="signUpConditions" required>
+                        <label class="form-check-label" for="signUpConditions">I read and accept the terms and conditions</label>
+                      </div>
+                      <div class="form-group">
+                        <button id="signUpBtn" class="btn btn-danger">Sign Up</button>
+                        <button id="signUpCancel" class="btn btn-secondary">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </header>
+
+        <!-- SOCIAL MEDIA BUTTONS -->
+        <div id="socialMedia" class="position-fixed">
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Twitter
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Facebook
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Dribble
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="socialMedia d-flex justify-content-end align-items-center">Google+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+<!-- MAIN -->
+        <!-- TOP TRENDS -->
+        <section id="topTrends">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center w-75">
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cat Attack</h5>
+                  <p class="card-text">2018</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- FEATURED MOVIES -->
+        <section id="featuredMovies" class=" d-flex justify-content-center">
+
+          <div class="col-sm-11 d-flex flex-column justify-content-center w-100">
+            <h1>FEATURED MOVIES</h1>
+            <div id="select">
+              <button href="#" class="btn" id='btn-all'>All</button>
+              <button href="#" class="btn" id='btn-action' >Action</button>
+              <button href="#" class="btn" id='btn-thriller'>Thriller</button>
+              <button href="#" class="btn" id='btn-scifi'>Sci-Fi</button>
+            </div>
+
+            <div id="moviesAll">
+              <div id="filmMoviesVisible">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-around flex-wrap">
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div id="filmMoviesInvisible">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-around flex-wrap">
+
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">Cat Attack</h5>
+                          <p class="card-text">2018</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+            <div class="text-center">
+              <button id="moviesButton" class="btn danger">MORE FILMS</button>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- FEATURED TV SERIES -->
+        <section id="featuredTvSeries">
+          <h1>FEATURES SERIES TV</h1>
+          <div>
+            <button href="#" class="btn"id='btn-all'>All</button>
+            <button href="#" class="btn" id='btn-action' >Actions</button>
+            <button href="#" class="btn" id='btn-thriller'>Policiers</button>
+
+          </div>
+
+          <div class="text-center">
+            <button class="btn danger">MORE FILMS</button>
+          </div>
+        </section>
+
+        <!-- SHOP MOVIES -->
+        <section id="shopMovies">
+          <h1>SHOP MOVIES</h1>
+          <div class="text-right">
+            <button class="btn btn-dark"><</button>
+            <button class="btn btn-dark">></button>
+          </div>
+          <div class="col-7 d-flex flex-row flex-wrap">
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">&nbsp;</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">&nbsp;</p>
+                  <p class="card-text">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT US -->
+        <section id="contactUs">
+          <h1>CONTACT US</h1>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <div id="contactUsMap"></div>
+
+            <div class="d-flex flex-column align-items-center w-50">
+              <form action="" class="w-100">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="col-sm-9 d-flex">
+                    <div class="form-group col-sm-6">
+                      <input id="contactFirstnameInput" type="text" class="form-control" placeholder="FIRST NAME" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <input id="contactLastnameInput" type="text" class="form-control" placeholder="LAST NAME" required>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-9 d-flex">
+                    <div class="col-sm-6">
+                      <input id="contactEmailInput" type="email" class="form-control" placeholder="EMAIL" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <input id="contactSubjectInput" type="text" class="form-control" placeholder="SUBJECT" required>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-9 text-center">
+                    <textarea id="contactMessageInput" name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE" required></textarea>
+                  </div>
+
+                </div>
+              </form>
+              <button id="contactUsButton" class="btn btn-danger">SEND MESSAGE</button>
+            </div>
+          </div>
+
+          <div id="contactUsEntries">
+            <div class="d-flex flex-column">
+              <p id="contactUsName"></p>
+              <p id="contactUsEmail"></p>
+              <p id="contactUsSubject"></p>
+              <p id="contactUsMessage"></p>
+            </div>
+            <div class="d-flex">
+              <form action="">
+                <button id="contactUsSubmit" class="btn btn-primary">Confirm and Send</button>
+              </form>
+              <button id="contactUsChange" class="btn btn-secondary">Make Changes</button>
+            </div>
+          </div>
+
+
+        </section>
+
+
+<!-- COOKIE BOX -->
+        <div id="cookieBox">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="d-flex justify-content-around w-50 align-items-center">
+              <p class="text-light mb-0">This website uses cookies to optimize your navigation.</p>
+              <a href="#" class="text-light">More Info</a>
+              <button id="cookieButton" class="btn">OK</button>
+            </div>
+          </div>
+        </div>
+
+<!-- FOOTER -->
+        <footer>
+            <div>
+                <h3>SUBSCRIBE TO US</h3>
+                <form method="post">
+                    <input type="email">
+                    <button type="button">SUBSCRIBE</button>
+                </form>
+                <div class="row">
+                    <div class="col-12 col-md-2 release">
+                        <h4>RELEASE</h4>
+                        <hr>
+                        <ul>
+                            <li><a href="">2016</a></li>
+                            <li><a href="">2015</a></li>
+                            <li><a href="">2014</a></li>
+                            <li><a href="">2013</a></li>
+                            <li><a href="">2012</a></li>
+                            <li><a href="">2011</a></li>
+                        </ul>
+                    </div>
+                <div class="col-12 col-md-2 movies">
+                    <h4>MOVIES</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="">ADVENTURE</a></li>
+                        <li><a href="">COMEDY</a></li>
+                        <li><a href="">FANTASY</a></li>
+                        <li><a href="">ACTION</a></li>
+                        <li><a href="">MOVIES</a></li>
+                        <li><a href="">HORROR</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-2 movies">
+                    <h4>REVIEW MOVIES</h4>
+                    <hr>
+                    <div class="review">
+                        <span>Comedy</span>
+                        <span>Horror</span>
+                        <span>Historical</span>
+                        <span>Romantic</span>
+                        <span>Love</span>
+                        <span>Action</span>
+                        <span>Crime</span>
+                        <span>Fantasy</span>
+                        <span>Mystery</span>
+                        <span>Sci-Fi</span>
+                        <span>Social</span>
+                        <span>Thriller</span>
+                        <span>Western</span>
+                        <span>Drama</span>
+                        <span>Reviews</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 movies">
+                    <h4>LATEST MOVIES</h4>
+                    <hr>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="https://careers.google.com/static/images/symbols/social-youtube.svg" width="120px" height="80px"></iframe>
+                        </div>
+                        <div class="col-7">
+                        Blabla
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="http://image.tmdb.org/t/p/w500/aKzrsizvthDgJkazdBRWVQI7x2i.jpg" width="120px" height="80px"></iframe>
+                        </div>
+                        <div class="col-7">
+                        Blabla
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="http://image.tmdb.org/t/p/w500/aKzrsizvthDgJkazdBRWVQI7x2i.jpg" width="120px" height="80px"></iframe>
+                        </div>
+                        <div class="col-7">
+                        Blabla
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="http://image.tmdb.org/t/p/w500/aKzrsizvthDgJkazdBRWVQI7x2i.jpg" width="120px" height="80px"></iframe>
+                        </div>
+                        <div class="col-7">
+                        Blabla
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4>ALLEZCINE!</h4>
+                    <hr>
+                    <div class="row allezcine">
+                        <img class="col-4" src="https://image.flaticon.com/icons/png/512/61/61109.png">
+                        <img class="col-4" src="https://image.flaticon.com/icons/png/512/61/61109.png">
+                        <img class="col-4" src="https://image.flaticon.com/icons/png/512/61/61109.png">
+                        <img class="col-4" src="https://image.flaticon.com/icons/png/512/61/61109.png">
+                        <img class="col-4" src="https://image.flaticon.com/icons/png/512/61/61109.png">
+                        <img class="col-4" src="https://image.flaticon.com/icons/png/512/61/61109.png">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr>
+                <hr>
+                <h5>CONNECT US</h5>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </div>
+        </footer>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVivygIzmFlOKVFhf3H0pGXel6i502SDk&callback=initMap"></script>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="testMovies.js"></script>
+    </body>
+</html>
