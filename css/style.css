@@ -213,3 +213,29 @@ h1 span {
 .bg-black {
 	background-color: black;
 }
+
+.badge-grey {
+	background-color: #2E2E2E;
+	opacity: 0.8;
+	color: lightgrey;
+	font-size: 1em;
+	margin: 5px 2px 5px 2px;
+}
+
+h4 span {
+	color: red;
+}
+
+.footerLign {
+	height: 50px;
+}
+
+.footerSocial div {
+	width: 35px;
+	height: 35px;
+	margin: 0px 3px 0px 3px;
+}
+
+.text-lightgrey {
+	color: #A4A4A4;
+}
