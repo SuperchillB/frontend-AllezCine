@@ -195,6 +195,10 @@ h1 span {
 	margin: 10px 10px 10px 10px;
 }
 
+.card-title {
+	height: 50px;
+}
+
 .articleBox {
 	width: 200px;
 	margin: 10px;
@@ -214,11 +218,12 @@ h1 span {
 	background-color: black;
 }
 
-.badge-grey {
+.btn-grey {
 	background-color: #2E2E2E;
 	opacity: 0.8;
 	color: lightgrey;
-	font-size: 1em;
+	font-size: 0.8em;
+	padding: 5px;
 	margin: 5px 2px 5px 2px;
 }
 

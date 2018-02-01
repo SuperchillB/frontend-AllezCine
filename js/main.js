@@ -189,7 +189,7 @@ function showFilm(jsonObj) {
     for(let i = 0, length1 = fillCard.length; i < length1; i++){
         fillTitle[i].textContent = film[counter].title;
         fillText[i].textContent = film[counter].release_date;
-        fillImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[counter].backdrop_path;
+        fillImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[counter].poster_path;
         fillCard[i].id = film[counter].id; // CREATE ID FOR EACH ARTICLE CREATED
         counter++;
     }
@@ -327,7 +327,7 @@ function showFilm(jsonObj) {
     let randomImage = Math.floor(Math.random()*30);
 
     for(let m = 0, length1 = footerAllezcine.length; m < length1; m++){
-        footerAllezcineImg[m].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].backdrop_path;
+        footerAllezcineImg[m].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].poster_path;
         footerAllezcine[m].id = film[randomImage].id; // CREATE ID FOR EACH ARTICLE CREATED
         randomImage++;
     }
