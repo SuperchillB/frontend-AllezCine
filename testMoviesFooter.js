@@ -137,6 +137,41 @@ function showFilm(jsonObj) {
             }
         }
     })
+
+
+
+
+
+
+
+    // FOOTER MOVIES LATEST MOVIES
+    let latestMovies = $('#latestMovies div');
+    let latestMoviesImg = $('#latestMovies img');
+    let latestMoviesTitle = $('#latestMovies p');
+
+    let times = 0;
+
+    for(let i = 0, length1 = latestMovies.length; i < length1; i++){
+        latestMoviesTitle[i].textContent = film[times].title;
+        latestMoviesImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[times].backdrop_path;
+        latestMovies[i].id = film[times].id; // CREATE ID FOR EACH ARTICLE CREATED
+        times++;
+    }
+
+
+    // FOOTER MOVIES ALLEZCINE
+    let footerAllezcine = $('#footerAllezcine div');
+    let footerAllezcineImg = $('#footerAllezcine img');
+
+    let counting = 0;
+
+    let randomImage = Math.floor(Math.random()*30);
+
+    for(let m = 0, length1 = footerAllezcine.length; m < length1; m++){
+        footerAllezcineImg[m].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].backdrop_path;
+        footerAllezcine[m].id = film[randomImage].id; // CREATE ID FOR EACH ARTICLE CREATED
+        randomImage++;
+    }
     // OR
     // $('#moviesButton').on('click', function() {
     //   if (moviesButtonClicked == false) {
