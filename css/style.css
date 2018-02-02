@@ -181,6 +181,7 @@ h1 span {
 	position: fixed;
 	bottom: 0;
 	padding-top: 7px;
+	z-index: 1001;
 }
 
 
@@ -251,6 +252,10 @@ h1 span {
 	margin: 10px 10px 10px 10px;
 }
 
+.card-title {
+	height: 50px;
+}
+
 .articleBox {
 	width: 200px;
 	margin: 10px;
@@ -263,4 +268,81 @@ h1 span {
 #featuredMovies h1, #featuredTvSeries h1, #shopMovies h1 {
 	border-left: 5px solid red;
 	padding-left: 10px;
+}
+
+/* ____________________________ SHOP MOVIES ____________________________ */
+#shopMovies .card {
+	width: 160px;
+	margin: 10px 10px 10px 10px;
+}
+
+#movieCarousel {
+	width: 700px;
+	/*margin: auto;*/
+	/*overflow: hidden;*/
+	/*position: relative;*/
+	background-color: black;
+	color: white;
+}
+
+#movieCarousel ul {
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+#movieCarousel ul li {
+	list-style: none;
+}
+
+
+.movieShow {
+	display: block;
+}
+
+.movieHide {
+	display: none;
+}
+
+/* ____________________________ BUTTON UP ____________________________ */
+.btnUpper {
+	position: fixed;
+	bottom: 30px;
+	right: 40px;
+	z-index: 1000;
+}
+
+
+/* ____________________________ FOOTER ____________________________ */
+.bg-black {
+	background-color: black;
+}
+
+.btn-grey {
+	background-color: #2E2E2E;
+	opacity: 0.8;
+	color: lightgrey;
+	font-size: 0.8em;
+	padding: 5px;
+	margin: 5px 2px 5px 2px;
+}
+
+h4 span {
+	color: red;
+}
+
+.footerLign {
+	height: 50px;
+}
+
+.footerSocial div {
+	width: 35px;
+	height: 35px;
+	margin: 0px 3px 0px 3px;
+}
+
+.text-lightgrey {
+	color: #A4A4A4;
 }
