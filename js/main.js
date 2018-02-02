@@ -305,11 +305,27 @@ function showFilm(jsonObj) {
 		fillCard[i].addEventListener('click', function() {
 			for(let j = 0, length1 = film.length; j < length1; j++){
 				if (fillCard[i].id == film[j].id) {
-					$('#exampleModalCenter').
+					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+					$('#trailerModalTitle').text(film[j].title);
+					$('#trailerModalYear').text(film[j].release_year);
+					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+					$('#trailerModalDescription').text(film[j].overview);
+					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+						if (film[j].genre_ids[k] == 28) {
+							$('#trailerModalGenre').text('Action');
+							console.log('Action');
+						} else if (film[j].genre_ids[k] == 53) {
+							$('#trailerModalGenre').text('Thriller');
+							console.log('Thriller');
+						} else if (film[j].genre_ids[k] == 878) {
+							$('#trailerModalGenre').text('Sci-Fi');
+							console.log('Sci-Fi');
+						}
+					}
+					
 				}
 				
 			}
-			console.log('clicked on card');
 		})
 	}
 }
@@ -468,18 +484,32 @@ function showSeries(jsonObj) {
     //     tvSeriesButtonClicked = false;
     //   }
     // });
+
+    // LAUNCH TV SERIES TRAILER ON CLICK
+    for(let i = 0, length1 = fillCard.length; i < length1; i++){
+		fillCard[i].addEventListener('click', function() {
+			for(let j = 0, length1 = film.length; j < length1; j++){
+				if (fillCard[i].id == film[j].id) {
+					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+					$('#trailerModalTitle').text(film[j].name);
+					$('#trailerModalYear').text(film[j].first_air_year);
+					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+					$('#trailerModalDescription').text(film[j].overview);
+					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+						if (film[j].genre_ids[k] == 35) {
+							$('#trailerModalGenre').text('Comedy');
+							console.log('Comedy');
+						} else if (film[j].genre_ids[k] == 18) {
+							$('#trailerModalGenre').text('Drama');
+							console.log('Drama');
+						} else if (film[j].genre_ids[k] == 10759) {
+							$('#trailerModalGenre').text('Adventure');
+							console.log('Adventure');
+						}
+					}
+				}
+			}
+		})
+	}
 }
-
-
-let clickedMovie = $('#moviesAll .card');
-let clickedTvSeries = $('#tvSeriesAll .card');
-// for(let i = 0, length1 = clickedMovie.length; i < length1; i++){
-// 	clickedMovie[i].addEventListener('click', function() {
-// 		for(let i = 0, length1 = array.length; i < length1; i++){
-// 			array[i]
-// 		}
-// 		console.log('clicked on card');
-// 	})
-// }
-
 
