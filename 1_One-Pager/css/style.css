@@ -1,0 +1,348 @@
+				/* ____________________________ NAVBAR ____________________________ */
+
+/*Navbar brand styling*/
+	.navbar-brand {
+		font-size: 40px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		margin: 0 40px 0 40px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.navbar-brand span {
+		color: red;
+	}
+/*Change navbar background on scroll (see JS)*/
+	.navbar {
+	    -webkit-transition: all 0.6s ease-out;
+	    -moz-transition: all 0.6s ease-out;
+	    -o-transition: all 0.6s ease-out;
+	    -ms-transition: all 0.6s ease-out;
+	    transition: all 0.6s ease-out;
+	}
+	.navbar.scrolled {
+	    background: rgb(68, 68, 68);
+	    background: rgba(0, 0, 0, 0.78);
+	}
+/*Navbar links styling*/
+	.nav-link {
+		color: white !important;
+	}
+	#navbarSupportedContent ul {
+		font-size: 12px;
+	}
+	#navbarSupportedContent ul li:nth-child(1) a {
+		color: red !important;
+		margin-right: 10px;
+	}
+	#navbarSupportedContent ul li:nth-child(2), #navbarSupportedContent ul li:nth-child(3), #navbarSupportedContent ul li:nth-child(4) {
+		background-color: rgba(255, 50, 50, 0.7);
+		margin-right: 5px;
+		transition: all ease 0.3s;
+	}
+	#navbarSupportedContent ul li:nth-child(2):hover, #navbarSupportedContent ul li:nth-child(3):hover, #navbarSupportedContent ul li:nth-child(4):hover {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	#navbarSupportedContent ul li:nth-child(5) {
+		margin-left: 40px;
+	}
+/*Navbar search bar styling*/
+#navbarSupportedContent form i {
+	position: relative;
+	color: white;
+	float: right;
+	margin-left: -35px;
+}
+#navbarSupportedContent input {
+	background-color: rgba(0, 0, 0, 0.7);
+	border: none;
+	border-radius: 20px;
+	height: 30px;
+	width: 230px !important;
+	padding-right: 30px;
+	color: rgb(200, 200, 200);
+}
+
+				/* ____________________________ JUMBOTRON ____________________________ */
+
+#carouselExampleIndicators h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 40px;
+}
+h1 span {
+	color: red;
+}
+
+
+				/* ____________________________ LOGIN ____________________________ */
+
+.loginBars {
+	background-color: red;
+	padding-left: 20px;
+	height: 60px;
+}
+
+.btn-black {
+	background-color: black;
+	border-radius: 0;
+}
+
+				/* ____________________________ MODALS ____________________________ */
+
+#signUpModal, #loginModal, #contactUsEntries {
+	height: 300px;
+	width: 400px;
+	background-color: #fff;
+	border: 2px solid red;
+	left: 50%;
+	top: 20%;
+	position: fixed;
+	margin-left: -200px;
+	box-shadow: 0px 0px 150px 0px black;
+	z-index: 3000;
+}
+
+#confirmAgeModal {
+	height: 200px;
+	width: 400px;
+	background-color: #fff;
+	border: 1px solid grey;
+	position: fixed;
+	left: 50%;
+	top: 20%;
+	margin-left: -200px;
+	box-shadow: 0px 0px 150px 0px black;
+	z-index: 3000;
+}
+
+#hidingDiv {
+	height:100vh;
+	width: 100vw;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/*#signUpModal form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+}*/
+
+#exampleModalCenter .modal-content {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+#exampleModalCenter .modal-header {
+	padding: 0 0.5rem;
+	border-bottom: none;
+}
+#exampleModalCenter .modal-body {
+	padding: 0 0 1rem 0;
+}
+
+#trailerVideoRow{
+	height: 250px;
+	padding-bottom: 15px;
+}
+#trailerModalTitle {
+	font-size: 1rem;
+}
+#trailerModalVideo {
+	width: 100%;
+	height: 100%;
+}
+#trailerModalImg {
+	width: 100%;
+}
+#trailerModalDescription, #trailerModalGenre, #trailerModalYear {
+	font-size: 14px;
+}
+#trailerModalDescription {
+	padding-left: 0;
+}
+
+				/* ____________________________ MAPS ____________________________ */
+#contactUsMap {
+	width : 300px;
+	height : 380px;
+}
+
+				/* ____________________________ COOKIES ____________________________ */
+#cookieBox {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(117, 117, 117, 0.8);
+	position: fixed;
+	bottom: 0;
+	padding-top: 7px;
+	z-index: 1001;
+}
+
+
+				/* ____________________________ SOCIAL MEDIA BUTTONS ____________________________ */
+#socialMedia {
+	position: fixed;
+	top: 50%;
+	left: -100px;
+	z-index: 100;
+}
+#socialMedia a {
+	text-decoration: none;
+	color: white;
+}
+.socialMedia {
+	width: 150px;
+	height: 50px;
+	border-radius: 0px 50px 50px 0px;
+	margin-bottom: 5px;
+	padding-right: 10px;
+	cursor: pointer;
+	transition: all ease 0.5s;
+}
+#twitter {
+	background-color: #1dcaff;
+}
+#facebook {
+	background-color: #3b5998;
+}
+#dribbble {
+	background-color: #ea4c89;
+}
+#googleplus {
+	background-color: #dd4b39;
+}
+.socialMedia:hover {
+	transform: translateX(100px);
+}
+.socialMedia:hover div {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.socialMedia:hover i {
+	color: white;
+}
+.socialMedia div {
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border-radius: 50%;
+	margin-left: 20px;
+	transition: all ease 0.7s;
+}
+.socialMedia i {
+	color: black;
+	transition: all ease 0.5s;
+}
+
+
+				/* ____________________________ FILM SECTIONS ____________________________ */
+.filmFlex {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 200px;
+	margin: 10px 10px 10px 10px;
+}
+
+.card-title {
+	height: 50px;
+}
+
+.articleBox {
+	width: 200px;
+	margin: 10px;
+}
+
+#topTrends .card, #featuredMovies .card, #featuredTvSeries .card {
+	cursor: pointer;
+}
+
+#featuredMovies h1, #featuredTvSeries h1, #shopMovies h1 {
+	border-left: 5px solid red;
+	padding-left: 10px;
+}
+
+/* ____________________________ SHOP MOVIES ____________________________ */
+#shopMovies .card {
+	width: 160px;
+	margin: 10px 10px 10px 10px;
+}
+
+#movieCarousel {
+	width: 700px;
+	/*margin: auto;*/
+	/*overflow: hidden;*/
+	/*position: relative;*/
+	background-color: black;
+	color: white;
+}
+
+#movieCarousel ul {
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+#movieCarousel ul li {
+	list-style: none;
+}
+
+
+.movieShow {
+	display: block;
+}
+
+.movieHide {
+	display: none;
+}
+
+/* ____________________________ BUTTON UP ____________________________ */
+.btnUpper {
+	position: fixed;
+	bottom: 30px;
+	right: 40px;
+	z-index: 1000;
+}
+
+
+/* ____________________________ FOOTER ____________________________ */
+.bg-black {
+	background-color: black;
+}
+
+.btn-grey {
+	background-color: #2E2E2E;
+	opacity: 0.8;
+	color: lightgrey;
+	font-size: 0.8em;
+	padding: 5px;
+	margin: 5px 2px 5px 2px;
+}
+
+h4 span {
+	color: red;
+}
+
+.footerLign {
+	height: 50px;
+}
+
+.footerSocial div {
+	width: 35px;
+	height: 35px;
+	margin: 0px 3px 0px 3px;
+}
+
+.text-lightgrey {
+	color: #A4A4A4;
+}
