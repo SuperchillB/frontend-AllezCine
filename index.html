@@ -837,89 +837,85 @@
         <!-- SHOP MOVIES -->
         <section>
           <h1>SHOP MOVIES</h1>
-          <div class="text-right controls">
-            <button data-nav="prev" id="shopMoviesPrev" class="btn btn-dark"><</button>
-            <button data-nav="next" id="shopMoviesNext" class="btn btn-dark">></button>
-          </div>
 
           <div class="d-flex">
             <div id="shopMovies" class="col-6 d-flex flex-row flex-wrap justify-content-center">
-              <div class="card">
+              <div class="card" data-title="It" data-counter="0">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text date">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-title="Annabelle: Creation" data-counter="1">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-title="Berlin Syndrome" data-counter="2">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-title="Get Out" data-counter="3">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-title="Gone Girl" data-counter="4">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-title="Pulp Fiction" data-counter="5">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-title="The Imitation Game" data-counter="6">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-title="Now You See Me" data-counter="7">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                   <h6 class="card-title text-center">&nbsp;</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">&nbsp;</p>
+                    <p class="card-text shopDateLeft">&nbsp;</p>
                     <p class="card-text">15 EURO</p>
                   </div>
                 </div>
@@ -927,37 +923,41 @@
             </div>
 
             <div class="col">
-              <div id="movieCarousel" class="card">
-                <ul class="shopVideos">
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
-                  <li><iframe src="" width="100%" height="400px"></iframe></li>
+              <div class="d-flex justify-content-end mr-4">
+                <button id="moviePrev" class="btn btn-dark mr-2 rounded-0"><</button>
+                <button id="movieNext" class="btn btn-dark rounded-0">></button>
+              </div>
+
+              <div id="movieCarousel" class="shopVideos card">
+
+                <ul id="movieCarouselFilm">
+                  <li><iframe src="https://www.youtube.com/embed/hAUTdjf9rko" width="700px" height="425px"></iframe></li>
                 </ul>
 
                 <div class="card-body">
-                  <h6 class="card-title">&nbsp;</h6>
+                  <h6 class="card-title text-danger">It</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">Story line</p>
-                    <p class="card-text shopDescription">&nbsp;</p>
+                    <p class="card-text col-4 text-danger">Story line</p>
+                    <span class="text-danger">: </span>
+                    <p class="col-8 card-text shopDescription">In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.</p>
                   </div>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">Release On</p>
-                    <p class="card-text shopDate">&nbsp;</p>
+                    <p class="card-text col-4 text-danger">Release On</p>
+                    <span class="text-danger">: </span>
+                    <p class="col-8 card-text shopDate">2017</p>
                   </div>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">GENRES</p>
-                    <p class="card-text shopGenre">&nbsp;</p>
+                    <p class="card-text col-4 text-danger">GENRES</p>
+                    <span class="text-danger">: </span>
+                    <p class="col-8 card-text shopGenre">Drama</p>
                   </div>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text">Price</p>
-                    <p class="card-text">15 EURO</p>
+                    <p class="card-text col-4 text-danger">Price</p>
+                    <span class="text-danger">: </span>
+                    <p class="col-8 card-text">15 EURO</p>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -1094,22 +1094,22 @@
                         <hr class="bg-secondary">
                         <div id="latestMovies" class="d-flex flex-column">
                             <div class="d-flex mb-2">
-                              <img class="mr-3" src="" width="100px" height="60px"></iframe>
+                              <img class="mr-3" src="" width="100px" height="60px"></img>
                               <p></p>
                             </div>
 
                             <div class="d-flex mb-2">
-                              <img class="mr-3" src="" width="100px" height="60px"></iframe>
+                              <img class="mr-3" src="" width="100px" height="60px"></img>
                               <p></p>
                             </div>
 
                             <div class="d-flex mb-2">
-                              <img class="mr-3" src="" width="100px" height="60px"></iframe>
+                              <img class="mr-3" src="" width="100px" height="60px"></img>
                               <p></p>
                             </div>
 
                             <div class="d-flex mb-2">
-                              <img class="mr-3" src="" width="100px" height="60px"></iframe>
+                              <img class="mr-3" src="" width="100px" height="60px"></img>
                               <p></p>
                             </div>
                         </div>

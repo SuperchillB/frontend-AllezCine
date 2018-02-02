@@ -307,80 +307,204 @@ function showFilm(jsonObj) {
 		let shopMovies = $('#shopMovies .card');
 		let shopMoviesImg = $('#shopMovies img');
 		let shopMoviesTitle = $('#shopMovies .card-title');
-		let shopMoviesText = $('#shopMovies .card-text');
+		let shopMoviesText = $('#shopMovies .shopDateLeft');
 
 		let more = 0;
 
 		for(let i = 0, length1 = shopMovies.length; i < length1; i++){
-				shopMoviesImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[more].poster_path;
-        shopMoviesTitle[i].textContent = film[more].title;
-				shopMoviesText[i].textContent = film[more].release_year;
-        shopMovies[i].id = film[more].id; // CREATE ID FOR EACH ARTICLE CREATED
-        more++;
+				shopMoviesImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[i].poster_path;
+        shopMoviesTitle[i].textContent = film[i].title;
+				shopMoviesText[i].textContent = film[i].release_year;
     }
 
 
 		// SHOP MOVIES RIGHT
-		let movieCarousel = $('#movieCarousel .shopVideos li');
-		let movieCarouselIframe = $('#movieCarousel iframe');
-		let movieCarouselTitle = $('#movieCarousel .card-title');
-		let movieCarouselDescription = $('#movieCarousel .shopDescription');
-		let movieCarouselDate = $('#movieCarousel .shopDate');
-		let movieCarouselGenre = $('#movieCarousel .shopGenre');
+    let shopMoviesList = [{
+    id: 346364,
+    title: "It",
+    poster_path: "\/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+    genre_ids: [18, 27, 53],
+    backdrop_path: "\/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg",
+    overview: "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+    release_year: "2017",
+    youtube: "hAUTdjf9rko",
+    movieCounter: 0
+    }, {
+    id: 396422,
+    title: "Annabelle: Creation",
+    poster_path: "\/tb86j8jVCVsdZnzf8I6cIi65IeM.jpg",
+    genre_ids: [27, 9648, 53],
+    backdrop_path: "\/3L5gfIKt2RK9vnCiLgWTAzkhQWC.jpg",
+    overview: "Several years after the tragic death of their little girl, a dollmaker and his wife welcome a nun and several girls from a shuttered orphanage into their home, soon becoming the target of the dollmaker's possessed creation, Annabelle.",
+    release_year: "2017",
+    youtube: "KisPhy7T__Q",
+    movieCounter: 1
+    }, {
+    id: 363126,
+    title: "Berlin Syndrome",
+    poster_path: "\/fskmBBGdm7KRA1ZRkdA2qaEqOAv.jpg",
+    genre_ids: [9648, 53, 18, 27],
+    backdrop_path: "\/bRUbcR11v8xWrwiFVWDwwQfPkc2.jpg",
+    overview: "A passionate holiday romance leads to an obsessive relationship when an Australian photojournalist wakes one morning in a Berlin apartment and is unable to leave.",
+    release_year: "2017",
+    youtube: "Y8tpKbrN9Uo",
+    movieCounter: 2
+    }, {
+    id: 419430,
+    title: "Get Out",
+    poster_path: "\/1SwAVYpuLj8KsHxllTF8Dt9dSSX.jpg",
+    genre_ids: [9648, 53, 27],
+    backdrop_path: "\/emZPptKwTzlMmYcjlTvVVHmOAac.jpg",
+    overview: "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
+    release_year: "2017",
+    youtube: "DzfpyUB60YY",
+    movieCounter: 3
+    }, {
+    id: 210577,
+    title: "Gone Girl",
+    poster_path: "\/gdiLTof3rbPDAmPaCf4g6op46bj.jpg",
+    genre_ids: [9648, 53, 18],
+    backdrop_path: "\/bt6DhdALyhf90gReozoQ0y3R3vZ.jpg",
+    overview: "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+    release_year: "2014",
+    youtube: "2-_-1nJf8Vg",
+    movieCounter: 4
+    }, {
+    id: 680,
+    title: "Pulp Fiction",
+    poster_path: "\/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
+    genre_ids: [53, 80],
+    backdrop_path: "\/9rZg1J6vMQoDVSgRyWcpJa8IAGy.jpg",
+    overview: "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    release_year: "1994",
+    youtube: "7EdQ4FqbhY",
+    movieCounter: 5
+    }, {
+    id: 205596,
+    title: "The Imitation Game",
+    poster_path: "\/noUp0XOqIcmgefRnRZa1nhtRvWO.jpg",
+    genre_ids: [36, 18, 53, 10752],
+    backdrop_path: "\/fii9tPZTpy75qOCJBulWOb0ifGp.jpg",
+    overview: "Based on the real life story of legendary cryptanalyst Alan Turing, the film portrays the nail-biting race against time by Turing and his brilliant team of code-breakers at Britain's top-secret Government Code and Cypher School at Bletchley Park, during the darkest days of World War II.",
+    release_year: "2014",
+    youtube: "S5CjKEFb-sM",
+    movieCounter: 6
+    }, {
+    id: 75656,
+    title: "Now You See Me",
+    poster_path: "\/A06e9YJ5ry3WXEIFIAD1mKBxcuZ.jpg",
+    genre_ids: [53, 80],
+    backdrop_path: "\/9wbXqcx6rHhoZ9Esp03C7amQzom.jpg",
+    overview: "An FBI agent and an Interpol detective track a team of illusionists who pull off bank heists during their performances and reward their audiences with the money.",
+    release_year: "2013",
+    youtube: "4OtM9j2lcUA",
+    movieCounter: 7
+    }];
 
-		for (var i = 0; i < movieCarousel.length; i++) {
-			movieCarouselIframe[i].src = 'https://www.youtube.com/embed/'+ film[more].youtube;
-			movieCarouselTitle[i].textContent = film[more].title;
-			movieCarouselDescription[i].textContent = film[more].overview;
-			movieCarouselDate[i].textContent = film[more].release_year;
-			movieCarousel[i].id = film[more].id; // CREATE ID FOR EACH ARTICLE CREATED
-			more++;
-			console.log('hello')
-		}
+    let movieCarousel = $('#movieCarousel ul li');
+    let movieCarouselIframe = $('#movieCarousel iframe');
+    let movieCarouselTitle = $('#movieCarousel .card-title');
+    let movieCarouselDescription = $('#movieCarousel .shopDescription');
+    let movieCarouselDate = $('#movieCarousel .shopDate');
+    let movieCarouselGenre = $('#movieCarousel .shopGenre');
+
+    let currentVideo = 0;
+    let clicked = false;
 
 
 
-		let carouselWidth = $('#movieCarousel ul li').first().children('iframe').width();
-		let carouselCount = $('#movieCarousel ul').children('li').length;
-		let currentVideo = 0;
+    shopMovies.on("click", function () {
+      clicked = true;
+      currentVideo = Number($(this).data('counter'));
+      for (var i = 0; i < shopMoviesList.length; i++) {
+        if ($(this).data('title') == shopMoviesList[i].title) {
+          movieCarouselIframe.attr('src', 'https://www.youtube.com/embed/' + shopMoviesList[i].youtube);
+          movieCarouselTitle.text(shopMoviesList[i].title);
+          movieCarouselDescription.text(shopMoviesList[i].overview);
+          movieCarouselDate.text(shopMoviesList[i].release_year);
+          if (shopMoviesList[i].genre_ids == 53) {
+            movieCarouselGenre.text('Thriller');
+          } else if (shopMoviesList[i].genre_ids == 878) {
+            movieCarouselGenre.text('Sci-Fi');
+          } else if (shopMoviesList[i].genre_ids == 28) {
+            movieCarouselGenre.text('Action');
+          } else if (shopMoviesList[i].genre_ids == 18) {
+            movieCarouselGenre.text('Drama');
+          }
+        }
+      }
+    })
 
-		$('#movieCarousel ul').css('width', carouselWidth*carouselCount);
+    $('#movieNext').on('click', function() {
+      if (clicked == true) {
+        clicked = false;
+        console.log($(this).data('counter'));
+        if (currentVideo == 7) {
+          currentVideo = 0;
+        } else {
+          currentVideo++;
+        }
+      } else {
+        if (currentVideo == 7) {
+          currentVideo = 0;
+        } else {
+          currentVideo++;
+        }
+      }
+      for (var i = 0; i < shopMovies.length; i++) {
+        if (shopMovies.data('title') == shopMoviesList[i].title) {
+          movieCarouselIframe.attr('src', 'https://www.youtube.com/embed/' + shopMoviesList[currentVideo].youtube);
+          movieCarouselTitle.text(shopMoviesList[currentVideo].title);
+          movieCarouselDescription.text(shopMoviesList[currentVideo].overview);
+          movieCarouselDate.text(shopMoviesList[currentVideo].release_year);
+          if (shopMoviesList[currentVideo].genre_ids == 53) {
+            movieCarouselGenre.text('Thriller');
+          } else if (shopMoviesList[currentVideo].genre_ids == 878) {
+            movieCarouselGenre.text('Sci-Fi');
+          } else if (shopMoviesList[currentVideo].genre_ids == 28) {
+            movieCarouselGenre.text('Action');
+          } else if (shopMoviesList[currentVideo].genre_ids == 18) {
+            movieCarouselGenre.text('Drama');
+          }
+        }
+      }
+    })
 
-		let transition = function (currentVideoElement, carouselWidthElement) {
-			let pxValue = -(currentVideoElement-1) * carouselWidthElement;
-			$('#movieCarousel ul').animate({
-				left:pxValue
-			});
-		}
+    $('#moviePrev').on('click', function() {
+      if (clicked == true) {
+        clicked = false;
+        console.log($(this).data('counter'));
+        if (currentVideo == 0) {
+          currentVideo = 7;
+        } else {
+          currentVideo--;
+        }
+      } else {
+        if (currentVideo == 0) {
+          currentVideo = 7;
+        } else {
+          currentVideo--;
+        }
+      }
+      for (var i = shopMovies.length-1; i > -1; i--) {
+        if (shopMovies.data('title') == shopMoviesList[i].title) {
+          movieCarouselIframe.attr('src', 'https://www.youtube.com/embed/' + shopMoviesList[currentVideo].youtube);
+          movieCarouselTitle.text(shopMoviesList[currentVideo].title);
+          movieCarouselDescription.text(shopMoviesList[currentVideo].overview);
+          movieCarouselDate.text(shopMoviesList[currentVideo].release_year);
+          if (shopMoviesList[currentVideo].genre_ids == 53) {
+            movieCarouselGenre.text('Thriller');
+          } else if (shopMoviesList[currentVideo].genre_ids == 878) {
+            movieCarouselGenre.text('Sci-Fi');
+          } else if (shopMoviesList[currentVideo].genre_ids == 28) {
+            movieCarouselGenre.text('Action');
+          } else if (shopMoviesList[currentVideo].genre_ids == 18) {
+            movieCarouselGenre.text('Drama');
+          }
+        }
+      }
+    })
 
-		$('#shopMoviesNext').on('click', function () {
-			if (currentVideo === carouselCount) {
-				currentVideo = 1;
-				transition(currentVideo, carouselWidth);
-			} else {
-				currentVideo++;
-				transition(currentVideo, carouselWidth);
-			}
-		})
-
-		$('#shopMoviesPrev').on('click', function () {
-			clearTimeout(slideshow);
-			slideshow = null;
-			if (currentVideo === 1) {
-				currentVideo = carouselCount;
-				transition(currentVideo, carouselWidth);
-			} else {
-				currentVideo--;
-				transition(currentVideo, carouselWidth);
-			}
-		})
-
-		let slideshow = function() {
-				$('#next').click();
-				setTimeout(slideshow, 2000);
-			}
-
-			slideshow();
 
 		// FOOTER MOVIES LATEST MOVIES
     let latestMovies = $('#latestMovies div');
@@ -389,10 +513,10 @@ function showFilm(jsonObj) {
 
     let times = 0;
 
-    for(let i = 0, length1 = latestMovies.length; i < length1; i++){
-        latestMoviesTitle[i].textContent = film[times].title;
-        latestMoviesImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[times].backdrop_path;
-        latestMovies[i].id = film[times].id; // CREATE ID FOR EACH ARTICLE CREATED
+    for(let r = 0, length1 = latestMovies.length; r < length1; r++){
+        latestMoviesTitle[r].textContent = film[times].title;
+        latestMoviesImg[r].src = 'http://image.tmdb.org/t/p/w185' + film[times].backdrop_path;
+        latestMovies[r].id = film[times].id; // CREATE ID FOR EACH ARTICLE CREATED
         times++;
     }
 

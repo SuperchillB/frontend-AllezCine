@@ -212,15 +212,15 @@ h1 span {
 }
 
 #movieCarousel {
-	width: 600px;
-	margin: auto;
-	overflow: hidden;
-	position: relative;
+	width: 700px;
+	/*margin: auto;*/
+	/*overflow: hidden;*/
+	/*position: relative;*/
+	background-color: black;
+	color: white;
 }
 
-#movieCarousel ul .shopVideos{
-	width: 100%;
-	height: 100%;
+#movieCarousel ul {
 	overflow: hidden;
 	position: relative;
 	left: 0px;
@@ -229,8 +229,16 @@ h1 span {
 }
 
 #movieCarousel ul li {
-	float: left;
 	list-style: none;
+}
+
+
+.movieShow {
+	display: block;
+}
+
+.movieHide {
+	display: none;
 }
 
 /* ____________________________ BUTTON UP ____________________________ */
