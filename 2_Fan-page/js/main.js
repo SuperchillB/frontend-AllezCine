@@ -1,24 +1,35 @@
 
 // BIOGRAPHY HIDDEN
-$('#biographyBond div').hide();
-$('#biographyConnery div').hide();
-$('#biographyBrosnan div').hide();
-$('#biographyCraig div').hide();
+$('.biographyDescription').hide();
 
 //BIOGRAPHY TOGGLE
 
 $('#biographyBond h4').on('click', function() {
-  $('#biographyBond div').slideToggle("slow")
+  $('.bioBond').slideToggle("slow")
 })
 
-$('#biographyConnery h4').on('click', function() {
-  $('#biographyConnery div').slideToggle("slow")
+$('.biographyConnery').on('click', function() {
+  $('.Connery').slideToggle("slow")
 })
 
-$('#biographyBrosnan h4').on('click', function() {
-  $('#biographyBrosnan div').slideToggle("slow")
+$('.biographyBrosnan').on('click', function() {
+  $('.Brosnan').slideToggle("slow")
 })
 
-$('#biographyCraig h4').on('click', function() {
-  $('#biographyCraig div').slideToggle("slow")
+$('.biographyCraig').on('click', function() {
+  $('.Craig').slideToggle("slow")
 })
+
+$('.biographyMoore').on('click', function() {
+  $('.Moore').slideToggle("slow")
+})
+
+$('.biographyDalton').on('click', function() {
+  $('.Dalton').slideToggle("slow")
+})
+
+$('.biographyLazenby').on('click', function() {
+  $('.Lazenby').slideToggle("slow")
+})
+
+$('.parallax-window').parallax({imageSrc: 'img/allBond.png'});

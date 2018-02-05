@@ -1,0 +1,34 @@
+.biographyDescription {
+  height: 100%;
+  text-align: justify;
+
+}
+
+.biographyDescription img {
+  width: 40%;
+  margin-right: 20px;
+  float: left;
+}
+
+.biographyDescription p {
+  width: 95%;
+}
+
+.Connery span, .Lazenby span, .Dalton span, .Craig span{
+  font-size: 4em;
+}
+
+.Lazenby span:first-child, .Craig span:first-child {
+margin-top: -25px;
+}
+
+.Lazenby span:last-of-type, .Craig span:last-of-type {
+margin-top: 45px;
+}
+
+
+.bg-Bond {
+  /*background-image: url('img/allBond.png');
+  background-position: center;*/
+  background-color: red; 
+}
