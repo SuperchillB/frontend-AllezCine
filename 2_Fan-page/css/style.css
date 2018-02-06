@@ -457,7 +457,7 @@ body {
 		  	height: 100%;
 		  	width: 100%;
 		  	transition: all 0.3s ease;
-		  	opacity: 0.2;
+		  	opacity: 0.1;
 		  	background-color: white;
 		}
 		.card-games:hover:after {
@@ -571,5 +571,37 @@ body {
 
 /* ________________________ PHOTO GALLERY ________________________ */
 
+	#photoGallery {
+		transition: all ease 0.3s;
+	}
+	.photo-Container {
+		max-width: 100%;
+		background-color: lightgrey;
+		padding: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
+	.photo-title {
+		outline: 1px solid green;
+	}
+
+	.photo-cards-container {
+		display: flex;
+		/*flex-wrap: wrap;*/
+		justify-content: center;
+		outline: 1px solid red;
+		/*width: 100%;*/
+		padding: 20px;
+	}
+
+	.photo-cards {
+		width: 200px;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	.photo-cards img {
+		width: 100%;
+	}
 

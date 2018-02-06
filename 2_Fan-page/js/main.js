@@ -234,5 +234,17 @@ $(document).ready(function() {
 
  // ________________________ PHOTO GALLERY ________________________ 
 
- 
+$('.photo-cards-container').masonry({
+	itemSelector: '.photo-cards',
+	columnWidth: 200,
+	gutter: 10,
+	// horizontalOrder: true,
+	fitWidth: true // Toggle for container width
+});
 
+$(document).ready(function() {
+	$.getJSON('')
+		.done(function(data) {
+
+
+	})
