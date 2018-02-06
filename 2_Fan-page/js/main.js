@@ -32,19 +32,6 @@ The ajax returns some (most-likely JSON formatted) content, and passes them into
 //     }
 // });
 
-$('#hiding-bg').hide();
-$('#movies-modal').hide();
-// $('#hiding-bg').on('click', function(){
-// 	navOpened = false;
-// 	$(this).fadeOut('fast');
-// 	$('nav').animate({left: '-200px'}, '500').css({
-// 		backgroundColor: 'transparent'
-// 	});
-// 	$('#homepage, #presentation, #biography, #photoGallery, #goodies, #contactUs').css({
-// 		transform: 'translateX(0px)'
-// 	});
-// 	$('.nav-toggle').removeClass('open');
-// });
 
  // ________________________ NAV ________________________ 
 
@@ -59,7 +46,7 @@ $('.nav-toggle').click(function(){
 			// 'filter': 'blur(3px)'
 			transform: 'translateX(20px)'
 		});
-		$('#hiding-bg').fadeIn('fast');
+		$('.hiding-bg').fadeIn('fast');
 		navOpened = true;
 	} else {
 		$('nav').animate({left: '-200px'}, '500').css({
@@ -69,9 +56,9 @@ $('.nav-toggle').click(function(){
 			// 'filter': 'blur(0px)'
 			transform: 'translateX(0px)'
 		});
-		$('#hiding-bg').fadeOut('fast');
+		$('.hiding-bg').fadeOut('fast');
 		navOpened = false;
-		// $('#hiding-bg').on('click', function(){
+		// $('.hiding-bg').on('click', function(){
 		// 	$(this).fadeOut('fast');
 		// 	$('nav').animate({left: '-200px'}, '500').css({
 		// 		backgroundColor: 'transparent'
@@ -88,14 +75,35 @@ $('.nav-menu li:nth-child(2)').on('click', function(){
 	$('.nav-dropdown').slideToggle('500');
 })
 
+$('#nav-pres-movies').on('click', function() {
+	$('#pres-books, #pres-games').hide();
+	$('#pres-movies').show();
+	$('.pres-title h1').text('Movies');
+})
+
+$('#nav-pres-books').on('click', function() {
+	$('#pres-movies, #pres-games').hide();
+	$('#pres-books').show();
+	$('.pres-title h1').text('Books (Ian Flemming)');
+})
+
+$('#nav-pres-games').on('click', function() {
+	$('#pres-movies, #pres-books').hide();
+	$('#pres-games').show();
+	$('.pres-title h1').text('Video Games');
+})
+
  // ________________________ PRESENTATION ________________________ 
+
+$('.hiding-bg').hide();
+$('#movies-modal').hide();
+$('#books-modal').hide();
+$('#games-modal').hide();
 
 /* MOVIES */
 
 let movieCards = $('#pres-movies .card-movies');
 let movieImg = $('#pres-movies .card-top img');
-// let movieTitle = $('#pres-movies .card-bottom p:nth-child(1)');
-// let movieYear = $('#pres-movies .card-bottom p:nth-child(2)');
 
 $(document).ready(function() {
 	$.getJSON('https://quentinclaes.github.io/allezcine/007movie2.json')
@@ -113,7 +121,8 @@ $(document).ready(function() {
 					movieModalOpened = true;
 					console.log(movieModalOpened);
 					$('#movies-modal').fadeIn('fast');
-					$('#hiding-bg').fadeIn('500');
+					$('.hiding-bg').fadeIn('500');
+					$('body').css('overflow', 'hidden');
 					for(let j = 0, length1 = jsonElement.length; j < length1; j++){
 						if (movieCards[i].id == jsonElement[j].id) {
 							$('#movies-modal-trailer').attr('src', 'https://www.youtube.com/embed/'+ jsonElement[j].youtube);
@@ -125,8 +134,9 @@ $(document).ready(function() {
 				})
 			}
 			$('.movies-modal-cross').on('click', function(){
-				$('#hiding-bg').fadeOut();
+				$('.hiding-bg').fadeOut();
 				$('#movies-modal').fadeOut();
+				$('body').css('overflow', 'visible');
 				movieModalOpened = false;
 				console.log(movieModalOpened);
 			})
@@ -137,60 +147,92 @@ $(document).ready(function() {
 /* BOOKS */
 
 let bookCards = $('#pres-books .card-books');
-let bookImg = $('#pres-books img');
+let bookImg = $('.card-books img');
 
 $(document).ready(function() {
 	$.getJSON('https://quentinclaes.github.io/allezcine/007book.json')
 		.done(function(data) {
+			let bookModalOpened = false;
 			// console.log(data);
 			let counter = 0;
 			for(let i = 0, length1 = bookCards.length; i < length1; i++){
 				bookImg[i].src = data[counter].poster;
-				bookCards[i].id = data[counter].id;
+				bookCards[i].id = data[counter].ID;
 				counter++;
+
+				bookCards[i].addEventListener('click', function() {
+					bookModalOpened = true;
+					console.log(bookModalOpened);
+					$('#books-modal').fadeIn('fast');
+					$('.hiding-bg').fadeIn('500');
+					$('body').css('overflow', 'hidden');
+					for(let j = 0, length1 = data.length; j < length1; j++){
+						if (bookCards[i].id == data[j].ID) {
+							$('#books-modal img').attr('src', data[j].poster);
+							$('.books-modal-right h5').text(data[j].title);
+							$('.books-modal-right p').text(data[j].release);
+							$('.books-modal-right div:nth-child(2)').text(data[j].synopsis);
+						}
+					console.log(data[j].release);
+					}
+				})
 			}
+			$('.books-modal-cross').on('click', function(){
+				$('.hiding-bg').fadeOut();
+				$('#books-modal').fadeOut();
+				$('body').css('overflow', 'visible');
+				bookModalOpened = false;
+				console.log(bookModalOpened);
+			})
 		})
 });
 
 /* VIDEO GAMES */
 
-let gamesCards = $('#pres-video-games .card-video-games');
-let gamesImg = $('#pres-video-games img');
+let gamesCards = $('#pres-games .card-games');
+let gamesImg = $('.card-games img');
 
 $(document).ready(function() {
 	$.getJSON('https://quentinclaes.github.io/allezcine/007game.json')
 		.done(function(data) {
+			let gameModalOpened = false;
 			// console.log(data);
 			let counter = 0;
 			for(let i = 0, length1 = gamesCards.length; i < length1; i++){
 				gamesImg[i].src = data[counter].poster;
-				gamesCards[i].id = data[counter].id;
+				gamesCards[i].id = data[counter].ID;
 				counter++;
 
-				// movieCards[i].addEventListener('click', function() {
-				// 	movieModalOpened = true;
-				// 	console.log(movieModalOpened);
-				// 	$('#movies-modal').fadeIn('fast');
-				// 	$('#hiding-bg').fadeIn('500');
-				// 	for(let j = 0, length1 = jsonElement.length; j < length1; j++){
-				// 		if (movieCards[i].id == jsonElement[j].id) {
-				// 			$('#movies-modal-trailer').attr('src', 'https://www.youtube.com/embed/'+ jsonElement[j].youtube);
-				// 			$('.movies-modal-bottom h5').text(jsonElement[j].title);
-				// 			$('.movies-modal-bottom p').text(jsonElement[j].release_date);
-				// 			$('.movies-modal-bottom div:nth-child(2)').text(jsonElement[j].overview);
-				// 		}
-				// 	}
-				// })
+				gamesCards[i].addEventListener('click', function() {
+					console.log('clicked');
+					gameModalOpened = true;
+					console.log(gameModalOpened);
+					$('#games-modal').fadeIn('fast');
+					$('.hiding-bg').fadeIn('500');
+					$('body').css('overflow', 'hidden');
+					for(let j = 0, length1 = data.length; j < length1; j++){
+						if (gamesCards[i].id == data[j].ID) {
+							$('#games-modal img').attr('src', data[j].poster);
+							$('.games-modal-right h5').text(data[j].title);
+							$('.games-modal-right p').text(data[j].release);
+							$('.games-modal-right div:nth-child(2)').text(data[j].console);
+						}
+					}
+					console.log(data[i].poster);
+				})
 			}
-			// $('.movies-modal-cross').on('click', function(){
-			// 	$('#hiding-bg').fadeOut();
-			// 	$('#movies-modal').fadeOut();
-			// 	movieModalOpened = false;
-			// 	console.log(movieModalOpened);
-			// })
+			$('.games-modal-cross').on('click', function(){
+				$('.hiding-bg').fadeOut();
+				$('#games-modal').fadeOut();
+				$('body').css('overflow', 'visible');
+				gameModalOpened = false;
+				console.log(gameModalOpened);
+			})
 		})
 });
 
 
+ // ________________________ PHOTO GALLERY ________________________ 
 
+ 
 
