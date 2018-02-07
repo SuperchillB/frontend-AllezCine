@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://use.fontawesome.com/b04ca2f55a.js"></script>
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -32,12 +33,15 @@
 			  <h1 class="display-3 text-center">Biography</h1>
         <div id="biographyBond">
           <div class="biographyName">
-            <h4 class="display-4 text-center">James Bond</h4>
+            <div class="d-flex justify-content-center align-items-center">
+              <h4 class="text-center cursorPointer">James Bond</h4>
+              <img id="biographyArrowBond" class="biographyBond cursorPointer" src="img/upArrow.svg" alt="">
+            </div>
             <hr>
           </div>
           <div class="biographyDescription bioBond">
             <!-- <img src="img/allBond.png" alt=""> -->
-            <div class="d-flex flex-column justify-content-center align-items-center bg-Bond">
+            <div class="d-flex flex-column justify-content-center align-items-center bg-allBond">
               <h2>Description</h2>
               <p>Commander <a href="https://en.wikipedia.org/wiki/James_Bond_(literary_character)">James Bond</a>  is a fictional character created by the British journalist and novelist Ian Fleming in 1953. The Bond character is a Secret Service agent, code number 007, residing in London but active internationally.</p>
               <p>Bond was a composite character based on a number of commandos whom Fleming knew during his service in the Naval Intelligence Division during the World War II, to whom Fleming added his own style and a number of his own tastes; Bond's name was appropriated from the American ornithologist James Bond. Bond has a number of character traits which run throughout the books, including an enjoyment of cars, a love of food and drink, and an average intake of sixty custom-made cigarettes a day.</p>
@@ -47,17 +51,17 @@
         </div>
 
         <div class="d-flex flex-column">
-          <div class="d-flex">
+          <div class="d-flex biographyAdaptActors">
             <div class="col-6">
               <div>
                 <div class="biographyName">
-                  <div class="d-flex justify-content-around">
-                    <h4 class="display-4 biographyConnery">Sean Connery</h4>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyConnery cursorPointer">Sean Connery</h4>
+                    <img id="biographyArrowConnery" class="biographyConnery cursorPointer" src="img/upArrow.svg" alt="">
                   </div>
                   <hr>
                 </div>
                 <div class="biographyDescription Connery">
-                  <img src="img/Sean_Connery.jpg" alt="">
                   <div>
                     <h2>Description</h2>
                     <p>Thomas Sean Connery (born 25 August 1930) is a retired Scottish actor. Connery was the first actor to portray the character James Bond in film, starring in seven Bond films between 1962 and 1983.</p>
@@ -75,13 +79,13 @@
 
               <div>
                 <div class="biographyName">
-                  <div class="d-flex justify-content-around">
-                    <h4 class="display-4 biographyMoore">Roger Moore</h4>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyMoore cursorPointer">Roger Moore</h4>
+                    <img id="biographyArrowMoore" class="biographyMoore cursorPointer" src="img/downArrow.svg" alt="">
                   </div>
                   <hr>
                 </div>
                 <div class="biographyDescription Moore">
-                  <img src="img/Roger_Moore.jpg" alt="">
                   <div>
                     <h2>Description</h2>
                     <p>Roger George Moore (14 October 1927 – 23 May 2017) was an English actor. He is best known for having played Ian Fleming's British secret agent James Bond in seven feature films from 1973 to 1985. </p>
@@ -94,13 +98,13 @@
 
               <div>
                 <div class="biographyName">
-                  <div class="d-flex justify-content-around">
-                    <h4 class="display-4 biographyBrosnan">Pierce Brosnan</h4>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyBrosnan cursorPointer">Pierce Brosnan</h4>
+                    <img id="biographyArrowBrosnan" class="biographyBrosnan cursorPointer" src="img/downArrow.svg" alt="">
                   </div>
                   <hr>
                 </div>
                 <div class="biographyDescription Brosnan">
-                  <img src="img/Pierce_Brosnan.jpg" alt="">
                   <div>
                     <h2>Description</h2>
                     <p>Pierce Brendan Brosnan OBE (Honorary) (born 16 May 1953) is an Irish actor, film producer, and activist. In 1994, Brosnan became the fifth actor to portray secret agent James Bond in the Eon Productions film series, starring in four films from 1995 to 2002. He lent his likeness for Bond in the video games GoldenEye 007, James Bond 007: Nightfire and James Bond 007: Everything or Nothing, providing his voice for the latter.</p>
@@ -114,13 +118,13 @@
             <div class="col-6">
               <div>
                 <div class="biographyName">
-                  <div class="d-flex justify-content-around">
-                    <h4 class="display-4 biographyLazenby">George Lazenby</h4>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyLazenby cursorPointer">George Lazenby</h4>
+                    <img id="biographyArrowLazenby" class="biographyLazenby cursorPointer" src="img/upArrow.svg" alt="">
                   </div>
                   <hr>
                 </div>
                 <div class="biographyDescription Lazenby">
-                  <img src="img/George_Lazenby.jpg" alt="">
                   <div>
                     <h2>Description</h2>
                     <p>George Robert Lazenby (born 5 September 1939) is an Australian actor and former model best known for his portrayal of James Bond in the Eon series in the 1969 film On Her Majesty's Secret Service at the age of 29, making him the youngest actor to date to have portrayed the character. Lazenby is also the only Bond actor to receive a nomination for the Golden Globe Award for New Star of the Year – Actor.</p>
@@ -138,13 +142,13 @@
 
               <div>
                 <div class="biographyName">
-                  <div class="d-flex justify-content-around">
-                    <h4 class="display-4 biographyDalton">Timothy Dalton</h4>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyDalton cursorPointer">Timothy Dalton</h4>
+                    <img id="biographyArrowDalton" class="biographyDalton cursorPointer" src="img/downArrow.svg" alt="">
                   </div>
                   <hr>
                 </div>
                 <div class="biographyDescription Dalton">
-                  <img src="img/Timothy_Dalton.png" alt="">
                   <div>
                     <h2>Description</h2>
                     <p>Timothy Dalton (born 21 March 1946) is a British actor. He is best known for portraying James Bond in The Living Daylights (1987) and Licence to Kill (1989).</p>
@@ -161,13 +165,14 @@
 
               <div>
                 <div class="biographyName">
-                  <div class="d-flex justify-content-around">
-                    <h4 class="display-4 biographyCraig">Daniel Craig</h4>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyCraig cursorPointer">Daniel Craig</h4>
+                    <img id="biographyArrowCraig" class="biographyCraig cursorPointer" src="img/downArrow.svg" alt="">
                   </div>
                   <hr>
                 </div>
                 <div class="biographyDescription Craig">
-                  <img src="img/Daniel_Craig.jpg" alt="">
+                  <!-- <img src="img/Daniel_Craig.jpg" alt=""> -->
                   <div>
                     <h2>Description</h2>
                     <p>Daniel Wroughton Craig (born 2 March 1968) is an English actor. Cast as the British secret agent James Bond in October 2005, his first film in the role, Casino Royale. He is the first actor to portray James Bond to have been born after the Bond series started and after the death of Ian Fleming, the novels' writer.</p>
@@ -198,19 +203,30 @@
 		</section>
 
 		<section id="contactUs">
-      <h1 class="display-3 text-center">Contact Us</h1>
-      <h4>Want to join be part of this James Bond fan project or ask some questions ? <br>Send us a mail here !</h4>
+      <div id="bgContact" class="d-flex flex-column align-items-center">
+        <h1 class="display-3 text-center">Contact Us</h1>
+        <h4>Want to join be part of this James Bond fan project or ask some questions ? <br>Send us a mail here !</h4>
 
-      <form action="">
-        <input id="contactFirstnameInput" type="text" class="form-control" placeholder="FIRST NAME" required>
-        <input id="contactLastnameInput" type="text" class="form-control" placeholder="LAST NAME" required>
-        <input id="contactEmailInput" type="email" class="form-control" placeholder="EMAIL" required>
-        <input id="contactSubjectInput" type="text" class="form-control" placeholder="SUBJECT" required>
-        <textarea id="contactMessageInput" name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE" required></textarea>
-      </form>
+        <p id="contactError">Please fill in everything.</p>
+        <form action="" class="contactForm d-flex flex-column align-items-center justify-content-center">
+          <input id="contactName" type="text" class="form-control" placeholder="NAME ( James Bond )" required>
+          <input id="contactEmail" type="email" class="form-control" placeholder="EMAIL ( james_bond_007@hotmail.com )" required>
+          <input id="contactSubject" type="text" class="form-control" placeholder="SUBJECT ( Top secret )" required>
+          <textarea id="contactMessage" name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE" required></textarea>
+          <button id="contactSubmit" type="submit" class="form-control btn btn-dark">Send</button>
+        </form>
 
-      <h4>You can also follow us on our Social Medias :</h4>
+        <h4 class="text-light mb-3 mt-3">You can also follow us on our Social Medias :</h4>
+        <div class="mt-3">
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-facebook" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-twitter" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-instagram" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-youtube" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light fa fa-3x fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+      </div>
 		</section>
+
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/parallax.js"></script>

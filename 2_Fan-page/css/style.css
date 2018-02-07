@@ -1,7 +1,22 @@
+
+/*BIOGRAPHY*/
+.biographyName h4 {
+  font-size: 3.2em;
+}
+
+.biographyName img {
+  width: 25px;
+  margin-left: 25px;
+}
+
+.biographyRotate {
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
 .biographyDescription {
   height: 100%;
   text-align: justify;
-
 }
 
 .biographyDescription img {
@@ -26,9 +41,110 @@ margin-top: -25px;
 margin-top: 45px;
 }
 
+.bg-allBond {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.6)), url('../img/Bondy.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
 
-.bg-Bond {
-  /*background-image: url('img/allBond.png');
-  background-position: center;*/
-  background-color: red; 
+.Connery {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/connery.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.Moore {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Roger_Moore.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.Brosnan {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/brosnan.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.Lazenby {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/George_Lazenby.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.Dalton {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Timothy_Dalton.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.Craig {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Daniel_Craig.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+
+/*CONTACT US*/
+.contactForm {
+  width: 45%;
+}
+
+/*#bgContact {
+  overflow: auto;
+  background: url('../img/bg-connery.jpg'),url('../img/bg-moore.jpg'),url('../img/bg-craig.jpg'),url('../img/bg-lazenby.jpg'),url('../img/bg-brosnan.jpg'),url('../img/bg-dalton.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+#contactUs {
+  background-image: url('../img/bgFusil.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 782px;
+}
+
+form {
+  padding: 15px;
+}
+
+#contactError {
+  margin-bottom: 0;
+  font-size: 1.1em;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 400px) {
+  .biographyAdaptActors {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .biographyAdaptActors div {
+    max-width: 100%;
+  }
+
+  .biographyName h4 {
+    font-size: 2em;
+  }
+
+  .bg-allBond {
+    background-position: right;
+  }
 }
