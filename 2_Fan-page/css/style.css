@@ -597,6 +597,7 @@ body {
 	}
 
 	.photo-cards {
+		float: left;
 		width: 200px;
 		margin-bottom: 10px;
 		cursor: pointer;
@@ -604,4 +605,77 @@ body {
 	.photo-cards img {
 		width: 100%;
 	}
+	.photos-cards--width3 {
+		width: 400px;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
 
+	.photo-cards:after {
+	  	content: "";
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	height: 100%;
+	  	width: 100%;
+	  	transition: all 0.3s ease;
+	  	opacity: 0.1;
+	  	background-color: black;
+	}
+	.photo-cards:hover:after {
+	  	opacity: 0.7;
+	}
+
+	#photos-modal {
+		width: auto;
+		/*height: 350px;*/
+		height: auto;
+		position: fixed;
+		top: 15%;
+		/*left: 50%;*/
+		background-color: #fff;
+		border-radius: 2%;
+		box-shadow: 0 0 20px 0px grey;
+		z-index: 11;
+		overflow: hidden;
+	}
+	#photos-modal .photos-modal-content {
+		display: flex;
+	}
+	#photos-modal img {
+		width: 100%;
+	}
+	.photos-modal-cross {
+		background-color: #232323;
+		border-radius: 50%;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		transition: all ease 0.3s;
+		z-index: 100;
+	}
+	.photos-modal-cross:hover {
+		transform: rotateZ(90deg);
+	}
+	.photos-modal-cross span {
+		background-color: #fff;
+		border-radius: 50%;
+		height: 3px;
+		width: 70%;
+		border-radius: 50px;
+		position: absolute;
+		display: block;
+		left: 3px;
+		opacity: 1;
+	}
+	.photos-modal-cross span:nth-child(1) {
+		top: 8px;
+		transform: rotateZ(45deg);
+	}
+	.photos-modal-cross span:nth-child(2) {
+		top: 8px;
+		transform: rotateZ(-45deg);
+	}
