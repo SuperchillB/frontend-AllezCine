@@ -1,39 +1,4 @@
 
-// PRESENTATION - MOVIES AJAX
-
-/*
-I've never programmed one myself, but I would imagine this is how it works.
-
-An event is bound to the the window scrolling
-
-$(window).scroll(myInfinteScrollFunction);
-The called function checks if scroll top is greater than the window size
-
-function myInfiniteScrollFunction() {
-    if($(window).scrollTop() == $(window).height())
-    makeAjaxRequest();
-}
-An AJAX request is made, specifying which result # to start at, how many to grab, and any other parameters necessary for the data pull.
-
-$.ajax({
-    type: "POST",
-    url:  "myAjaxFile.php",
-    data: {"resultNum": 30, "numPerPage": 50, "query": "interesting%20icons" },
-    success: myInfiniteLoadFunction(msg)
-});
-The ajax returns some (most-likely JSON formatted) content, and passes them into the loadnig function.
-
-*/
-
-
-
-// $(window).scroll(function() {
-//     if($(window).scrollTop() == $(document).height() - $(window).height()) {
-//            // ajax call or some other logic to show data here
-//     }
-// });
-
-
  // ________________________ NAV ________________________
 
 let navOpened = false;
@@ -76,22 +41,52 @@ $('.nav-menu li:nth-child(2)').on('click', function(){
 	$('.nav-dropdown').slideToggle('500');
 })
 
+$('#nav-homepage').on('click', function() {
+	$('#pres-movies, #presentation, #pres-books, #pres-games, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#homepage').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
 $('#nav-pres-movies').on('click', function() {
-	$('#pres-books, #pres-games').hide();
-	$('#pres-movies').show();
+	$('#homepage, #pres-books, #pres-games, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#presentation, #pres-movies').show();
 	$('.pres-title h1').text('Movies');
 })
 
 $('#nav-pres-books').on('click', function() {
-	$('#pres-movies, #pres-games').hide();
-	$('#pres-books').show();
+	$('#homepage, #pres-movies, #pres-games, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#presentation, #pres-books').show();
 	$('.pres-title h1').text('Books (Ian Flemming)');
 })
 
 $('#nav-pres-games').on('click', function() {
-	$('#pres-movies, #pres-books').hide();
-	$('#pres-games').show();
+	$('#homepage, #pres-movies, #pres-books, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#presentation, #pres-games').show();
 	$('.pres-title h1').text('Video Games');
+})
+
+$('#nav-biography').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #photoGallery, #goodies, #contactUs').hide();
+	$('#biography').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
+$('#nav-photo-gallery').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #biography, #goodies, #contactUs').hide();
+	$('#photoGallery').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
+$('#nav-goodies').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #biography, #photoGallery, #contactUs').hide();
+	$('#goodies').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
+$('#nav-contact').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #biography, #photoGallery, #goodies').hide();
+	$('#contactUs').show();
+	// $('.pres-title h1').text('Video Games');
 })
 
  // ________________________ PRESENTATION ________________________
@@ -235,22 +230,78 @@ $(document).ready(function() {
 
  // ________________________ PHOTO GALLERY ________________________
 
-$('.photo-cards-container').masonry({
-	itemSelector: '.photo-cards',
-	columnWidth: 200,
-	gutter: 10,
-	// horizontalOrder: true,
-	fitWidth: true // Toggle for container width
-});
+$('#photos-modal').hide();
 
 $(document).ready(function() {
-	$.getJSON('')
+	$.getJSON('https://raw.githubusercontent.com/SuperchillB/frontend-AllezCine/Bertie/2_Fan-page/js/photoGallery.json')
 		.done(function(data) {
+			let photoModalOpened = false;
+			// for(let i = 0, length1 = data.length; i < length1; i++){
+			for(let i = 0, length1 = data.length; i < length1; i++){
+				$('.photo-cards-container').append(
+					$('<div/>')
+						.attr("id", "photo" + (i+1)) // Could add id here
+						.addClass("photo-cards")
+						.append("<img>")
+				);
+			}
+			let photoCards = $('.photo-cards');
+			let photoImg = $('.photo-cards img');
+			for(let i = 0, length1 = photoCards.length; i < length1; i++){
+				photoImg[i].src = data[i].photo;
+				photoCards[i].addEventListener('click', function() {
+					// console.log('clicked');
+					photoModalOpened = true;
+					// console.log(photoModalOpened);
+					$('#photos-modal').fadeIn('fast');
+					$('.hiding-bg').fadeIn('500');
+					$('body').css('overflow', 'hidden');
+					for(let j = 0, length1 = data.length; j < length1; j++){
+						// console.log(photoCards[i].id);
+						// console.log(data[j].photo);
+						if (photoCards[i].id == data[j].id) {
+							console.log('same');
+							$('#photos-modal img').attr('src', data[j].photo);
+						}
+					}
+					// console.log(data[i].poster);
+				})
+			}
 
+			$('.photos-modal-cross').on('click', function(){
+				$('.hiding-bg').fadeOut();
+				$('#photos-modal').fadeOut();
+				$('body').css('overflow', 'visible');
+				photoModalOpened = false;
+				// console.log(photoModalOpened);
+			})
+
+			let grid = $('.photo-cards-container').masonry({
+				itemSelector: '.photo-cards',
+				columnWidth: 200,
+				gutter: 10,
+				// horizontalOrder: true,
+				fitWidth: true // Toggle for container width
+			});
+
+			grid.imagesLoaded().progress(function() {
+				grid.masonry();
+			});
+
+			photoCards[8].classList.add('photos-cards--width3');
+			photoCards[10].classList.add('photos-cards--width3');
+			photoCards[19].classList.add('photos-cards--width3');
+			photoCards[26].classList.add('photos-cards--width3');
+			photoCards[38].classList.add('photos-cards--width3');
+			photoCards[46].classList.add('photos-cards--width3');
+			photoCards[56].classList.add('photos-cards--width3');
+			photoCards[7].classList.add('photos-cards--width3');
+			photoCards[14].classList.add('photos-cards--width3');
+			photoCards[35].classList.add('photos-cards--width3');
+			photoCards[63].classList.add('photos-cards--width3');
 
 	})
-}
-
+})
 
 
 // ________________________ BIOGRAPHY ________________________

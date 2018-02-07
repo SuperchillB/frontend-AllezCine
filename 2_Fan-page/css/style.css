@@ -597,6 +597,7 @@ body {
 	}
 
 	.photo-cards {
+		float: left;
 		width: 200px;
 		margin-bottom: 10px;
 		cursor: pointer;
@@ -604,146 +605,219 @@ body {
 	.photo-cards img {
 		width: 100%;
 	}
+	.photos-cards--width3 {
+		width: 400px;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+
+	.photo-cards:after {
+	  	content: "";
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	height: 100%;
+	  	width: 100%;
+	  	transition: all 0.3s ease;
+	  	opacity: 0.1;
+	  	background-color: grey;
+	}
+	.photo-cards:hover:after {
+	  	opacity: 0.7;
+	}
+
+	#photos-modal {
+		height: 80vh;
+		position: fixed;
+		/*top: 10%;*/
+		top: 0;
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 0 20px 0px grey;
+		z-index: 11;
+		overflow: hidden;
+	}
+	#photos-modal .photos-modal-content {
+		display: flex;
+	}
+	#photos-modal img {
+		/*width: 100%;*/
+		height: 80vh;
+	}
+	.photos-modal-cross {
+		background-color: #232323;
+		border-radius: 50%;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		transition: all ease 0.3s;
+		z-index: 100;
+	}
+	.photos-modal-cross:hover {
+		transform: rotateZ(90deg);
+	}
+	.photos-modal-cross span {
+		background-color: #fff;
+		border-radius: 50%;
+		height: 3px;
+		width: 70%;
+		border-radius: 50px;
+		position: absolute;
+		display: block;
+		left: 3px;
+		opacity: 1;
+	}
+	.photos-modal-cross span:nth-child(1) {
+		top: 8px;
+		transform: rotateZ(45deg);
+	}
+	.photos-modal-cross span:nth-child(2) {
+		top: 8px;
+		transform: rotateZ(-45deg);
+	}
 
 
-  /* ________________________ BIOGRAPHY ________________________ */
-  .biographyName h4 {
-    font-size: 3.2em;
-  }
+	  /* ________________________ BIOGRAPHY ________________________ */
+	  .biographyName h4 {
+	    font-size: 3.2em;
+	  }
 
-  .biographyName img {
-    width: 25px;
-    margin-left: 25px;
-  }
+	  .biographyName img {
+	    width: 25px;
+	    margin-left: 25px;
+	  }
 
-  .biographyRotate {
-    transform: rotate(180deg);
-    transition-duration: 0.5s;
-  }
+	  .biographyRotate {
+	    transform: rotate(180deg);
+	    transition-duration: 0.5s;
+	  }
 
-  .biographyDescription {
-    height: 100%;
-    text-align: justify;
-  }
+	  .biographyDescription {
+	    height: 100%;
+	    text-align: justify;
+	  }
 
-  .biographyDescription img {
-    width: 40%;
-    margin-right: 20px;
-    float: left;
-  }
+	  .biographyDescription img {
+	    width: 40%;
+	    margin-right: 20px;
+	    float: left;
+	  }
 
-  .biographyDescription p {
-    width: 95%;
-  }
+	  .biographyDescription p {
+	    width: 95%;
+	  }
 
-  .Connery span, .Lazenby span, .Dalton span, .Craig span{
-    font-size: 4em;
-  }
+	  .Connery span, .Lazenby span, .Dalton span, .Craig span{
+	    font-size: 4em;
+	  }
 
-  .Lazenby span:first-child, .Craig span:first-child {
-  margin-top: -25px;
-  }
+	  .Lazenby span:first-child, .Craig span:first-child {
+	  margin-top: -25px;
+	  }
 
-  .Lazenby span:last-of-type, .Craig span:last-of-type {
-  margin-top: 45px;
-  }
+	  .Lazenby span:last-of-type, .Craig span:last-of-type {
+	  margin-top: 45px;
+	  }
 
-  .bg-allBond {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.6)), url('../img/Bondy.jpg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 500px;
-  }
+	  .bg-allBond {
+	    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.6)), url('../img/Bondy.jpg');
+	    background-position: top;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    height: 500px;
+	  }
 
-  .Connery {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/connery.jpg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
-    background-attachment: fixed;
-  }
+	  .Connery {
+	    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/connery.jpg");
+	    background-repeat: no-repeat;
+	    background-position: left;
+	    background-size: contain;
+	    background-attachment: fixed;
+	  }
 
-  .Moore {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Roger_Moore.jpg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
-    background-attachment: fixed;
-  }
+	  .Moore {
+	    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Roger_Moore.jpg");
+	    background-repeat: no-repeat;
+	    background-position: left;
+	    background-size: contain;
+	    background-attachment: fixed;
+	  }
 
-  .Brosnan {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/brosnan.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
-    background-attachment: fixed;
-  }
+	  .Brosnan {
+	    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/brosnan.png");
+	    background-repeat: no-repeat;
+	    background-position: left;
+	    background-size: contain;
+	    background-attachment: fixed;
+	  }
 
-  .Lazenby {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/George_Lazenby.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    background-attachment: fixed;
-  }
+	  .Lazenby {
+	    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/George_Lazenby.jpg");
+	    background-repeat: no-repeat;
+	    background-position: right;
+	    background-size: contain;
+	    background-attachment: fixed;
+	  }
 
-  .Dalton {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Timothy_Dalton.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    background-attachment: fixed;
-  }
+	  .Dalton {
+	    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Timothy_Dalton.png");
+	    background-repeat: no-repeat;
+	    background-position: right;
+	    background-size: contain;
+	    background-attachment: fixed;
+	  }
 
-  .Craig {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Daniel_Craig.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    background-attachment: fixed;
-  }
+	  .Craig {
+	    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../img/Daniel_Craig.jpg");
+	    background-repeat: no-repeat;
+	    background-position: right;
+	    background-size: contain;
+	    background-attachment: fixed;
+	  }
 
 
-  /* ________________________ CONTACT US ________________________ */
-  .contactForm {
-    width: 45%;
-  }
+	  /* ________________________ CONTACT US ________________________ */
+	  .contactForm {
+	    width: 45%;
+	  }
 
-  #contactUs {
-    background-image: url('../img/bgFusil.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 782px;
-  }
+	  #contactUs {
+	    background-image: url('../img/bgFusil.jpg');
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 780px;
+	  }
 
-  form {
-    padding: 15px;
-  }
+	  form {
+	    padding: 15px;
+	  }
 
-  #contactError {
-    margin-bottom: 0;
-    font-size: 1.1em;
-  }
+	  #contactError {
+	    margin-bottom: 0;
+	    font-size: 1.1em;
+	  }
 
-  /* ________________________ MEDIA QUERIES ________________________ */
-  @media screen and (max-width: 400px) {
-    .biographyAdaptActors {
-      display: flex;
-      flex-direction: column;
-    }
+	  /* ________________________ MEDIA QUERIES ________________________ */
+	  @media screen and (max-width: 400px) {
+	    .biographyAdaptActors {
+	      display: flex;
+	      flex-direction: column;
+	    }
 
-    .biographyAdaptActors div {
-      max-width: 100%;
-    }
+	    .biographyAdaptActors div {
+	      max-width: 100%;
+	    }
 
-    .biographyName h4 {
-      font-size: 2em;
-    }
+	    .biographyName h4 {
+	      font-size: 2em;
+	    }
 
-    .bg-allBond {
-      background-position: right;
-    }
-  }
+	    .bg-allBond {
+	      background-position: right;
+	    }
+	  }
