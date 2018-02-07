@@ -620,21 +620,19 @@ body {
 	  	width: 100%;
 	  	transition: all 0.3s ease;
 	  	opacity: 0.1;
-	  	background-color: black;
+	  	background-color: grey;
 	}
 	.photo-cards:hover:after {
 	  	opacity: 0.7;
 	}
 
 	#photos-modal {
-		width: auto;
-		/*height: 350px;*/
-		height: auto;
+		height: 80vh;
 		position: fixed;
-		top: 15%;
-		/*left: 50%;*/
+		/*top: 10%;*/
+		top: 0;
 		background-color: #fff;
-		border-radius: 2%;
+		border-radius: 10px;
 		box-shadow: 0 0 20px 0px grey;
 		z-index: 11;
 		overflow: hidden;
@@ -643,7 +641,8 @@ body {
 		display: flex;
 	}
 	#photos-modal img {
-		width: 100%;
+		/*width: 100%;*/
+		height: 80vh;
 	}
 	.photos-modal-cross {
 		background-color: #232323;

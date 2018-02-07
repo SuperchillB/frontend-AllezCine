@@ -40,22 +40,52 @@ $('.nav-menu li:nth-child(2)').on('click', function(){
 	$('.nav-dropdown').slideToggle('500');
 })
 
+$('#nav-homepage').on('click', function() {
+	$('#pres-movies, #presentation, #pres-books, #pres-games, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#homepage').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
 $('#nav-pres-movies').on('click', function() {
-	$('#pres-books, #pres-games').hide();
-	$('#pres-movies').show();
+	$('#homepage, #pres-books, #pres-games, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#presentation, #pres-movies').show();
 	$('.pres-title h1').text('Movies');
 })
 
 $('#nav-pres-books').on('click', function() {
-	$('#pres-movies, #pres-games').hide();
-	$('#pres-books').show();
+	$('#homepage, #pres-movies, #pres-games, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#presentation, #pres-books').show();
 	$('.pres-title h1').text('Books (Ian Flemming)');
 })
 
 $('#nav-pres-games').on('click', function() {
-	$('#pres-movies, #pres-books').hide();
-	$('#pres-games').show();
+	$('#homepage, #pres-movies, #pres-books, #biography, #photoGallery, #goodies, #contactUs').hide();
+	$('#presentation, #pres-games').show();
 	$('.pres-title h1').text('Video Games');
+})
+
+$('#nav-biography').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #photoGallery, #goodies, #contactUs').hide();
+	$('#biography').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
+$('#nav-photo-gallery').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #biography, #goodies, #contactUs').hide();
+	$('#photoGallery').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
+$('#nav-goodies').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #biography, #photoGallery, #contactUs').hide();
+	$('#goodies').show();
+	// $('.pres-title h1').text('Video Games');
+})
+
+$('#nav-contact').on('click', function() {
+	$('#homepage, #presentation, #pres-movies, #pres-books, #pres-games, #biography, #photoGallery, #goodies').hide();
+	$('#contactUs').show();
+	// $('.pres-title h1').text('Video Games');
 })
 
  // ________________________ PRESENTATION ________________________ 
@@ -227,10 +257,10 @@ $(document).ready(function() {
 					$('body').css('overflow', 'hidden');
 					for(let j = 0, length1 = data.length; j < length1; j++){
 						// console.log(photoCards[i].id);
-						console.log(data[j].photo);
+						// console.log(data[j].photo);
 						if (photoCards[i].id == data[j].id) {
 							console.log('same');
-							$('#photos-modal img').attr('src', data[j].poster);
+							$('#photos-modal img').attr('src', data[j].photo);
 						}
 					}
 					// console.log(data[i].poster);
