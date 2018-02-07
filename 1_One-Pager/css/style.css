@@ -75,7 +75,7 @@ body {
 #overCarousel {
 	position: relative;
 	top: -500px;
-	margin-bottom: -160px;
+	margin-bottom: -176px;
 }
 
 				/* ____________________________ JUMBOTRON ____________________________ */
@@ -316,6 +316,12 @@ h1 span {
 	list-style: none;
 }
 
+#movieCarouselFilm div {
+	width: 100%;
+	min-height: 100px;
+	height: 400px;
+	max-height: 400px;
+}
 
 /* ____________________________ CONTACT US ____________________________ */
 #contactUsEntries {
@@ -369,4 +375,12 @@ h4 span {
 
 .text-lightgrey {
 	color: #A4A4A4;
+}
+
+/* ________________________ MEDIA QUERIES ________________________ */
+@media screen and (max-width: 400px) {
+	body {
+		width: 100%;
+	}
+	/*.movieCarouselFilm*/
 }

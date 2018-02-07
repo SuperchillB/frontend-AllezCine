@@ -947,29 +947,29 @@
               <div id="movieCarousel" class="shopVideos card">
 
                 <div id="movieCarouselFilm" class="d-flex justify-content-center">
-                  <div><iframe src="https://www.youtube.com/embed/hAUTdjf9rko" width="670px" height="400px"></iframe></div>
+                  <div><iframe src="https://www.youtube.com/embed/hAUTdjf9rko" width="100%" height="100%"></iframe></div>
                 </div>
 
                 <div class="card-body">
                   <h6 class="card-title text-danger">It</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text col-4 text-danger">Story line</p>
-                    <span class="text-danger">: </span>
+                    <p class="card-text col-3 text-danger">Story line</p>
+                    <span class="col-1 text-danger">: </span>
                     <p class="col-8 card-text shopDescription">In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.</p>
                   </div>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text col-4 text-danger">Release On</p>
-                    <span class="text-danger">: </span>
+                    <p class="card-text col-3 text-danger">Release On</p>
+                    <span class="col-1 text-danger">: </span>
                     <p class="col-8 card-text shopDate">2017</p>
                   </div>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text col-4 text-danger">GENRES</p>
-                    <span class="text-danger">: </span>
+                    <p class="card-text col-3 text-danger">GENRES</p>
+                    <span class="col-1 text-danger">: </span>
                     <p class="col-8 card-text shopGenre">Drama</p>
                   </div>
                   <div class="d-flex justify-content-between">
-                    <p class="card-text col-4 text-danger">Price</p>
-                    <span class="text-danger">: </span>
+                    <p class="card-text col-3 text-danger">Price</p>
+                    <span class="col-1 text-danger">: </span>
                     <p class="col-8 card-text">15 EURO</p>
                   </div>
                 </div>
@@ -1017,12 +1017,29 @@
 
           <div id="contactUsEntries">
             <div class="d-flex flex-column">
-              <p id="contactUsName"></p>
-              <p id="contactUsEmail"></p>
-              <p id="contactUsSubject"></p>
-              <p id="contactUsMessage"></p>
+              <h5 class="text-center">Contact Message Resume</h5>
+              <div class="d-flex">
+                <p class="col-3 text-danger"><strong>Name</strong></p>
+                <span class="col-1 text-danger"><strong>:</strong></span>
+                <p id="contactUsName" class="col"></p>
+              </div>
+              <div class="d-flex">
+                <p class="col-3 text-danger"><strong>Email</strong></p>
+                <span class="col-1 text-danger"><strong>:</strong></span>
+                <p id="contactUsEmail" class="col"></p>
+              </div>
+              <div class="d-flex">
+                <p class="col-3 text-danger"><strong>Subject</strong></p>
+                <span class="col-1 text-danger"><strong>:</strong></span>
+                <p id="contactUsSubject" class="col"></p>
+              </div>
+              <div class="d-flex">
+                <p class="col-3 text-danger"><strong>Message</strong></p>
+                <span class="col-1 text-danger"><strong>:</strong></span>
+                <p id="contactUsMessage" class="col"></p>
+              </div>
             </div>
-            <div class="d-flex">
+            <div class="d-flex justify-content-around">
               <form action="">
                 <button id="contactUsSubmit" class="btn btn-danger">Confirm and Send</button>
               </form>
