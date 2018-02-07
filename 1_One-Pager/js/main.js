@@ -82,10 +82,10 @@ $('#contactUsButton').on('click', function() {
 
     if (contactNames !== '' && contactEmail !== '' && contactSubject !== '' && contactMessage !== '') {
         $('#hidingDiv').show();
-        $('#contactUsName').text(contactNames);
-        $('#contactUsEmail').text(contactEmail);
-        $('#contactUsSubject').text(contactSubject);
-        $('#contactUsMessage').text(contactMessage);
+        $('#contactUsName').html("<strong>Name:</strong> " + contactNames);
+        $('#contactUsEmail').html("<strong>Email:</strong> " + contactEmail);
+        $('#contactUsSubject').html("<strong>Subject:</strong> " + contactSubject);
+        $('#contactUsMessage').html("<strong>Message:</strong> " + contactMessage);
         $('#contactUsEntries').show();
     }
 })
@@ -115,15 +115,15 @@ $('#cookieButton').on('click', function() {
 
 
 // MENU LINKS SLIDE
-$(document).ready(function(){
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        var target = this.hash;
-        $('html, body').animate({
-          'scrollTop': $(target).offset().top + (-90)
-        }, 600, 'swing');
-    });
-});
+// $(document).ready(function(){
+//     $('a[href^="#"]').on('click', function (e) {
+//         e.preventDefault();
+//         var target = this.hash;
+//         $('html, body').animate({
+//           'scrollTop': $(target).offset().top + (-90)
+//         }, 600, 'swing');
+//     });
+// });
 
 
 //BUTTON UP SLIDE
@@ -313,7 +313,7 @@ function showFilm(jsonObj) {
 
 	for(let i = 0, length1 = shopMovies.length; i < length1; i++){
 		shopMoviesImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[i].poster_path;
-    	shopMoviesTitle[i].textContent = film[i].title;
+    shopMoviesTitle[i].textContent = film[i].title;
 		shopMoviesText[i].textContent = film[i].release_year;
 	}
 
@@ -401,7 +401,6 @@ function showFilm(jsonObj) {
 	    movieCounter: 7
     }];
 
-    let movieCarousel = $('#movieCarousel ul li');
     let movieCarouselIframe = $('#movieCarousel iframe');
     let movieCarouselTitle = $('#movieCarousel .card-title');
     let movieCarouselDescription = $('#movieCarousel .shopDescription');
@@ -521,11 +520,25 @@ function showFilm(jsonObj) {
     let footerAllezcine = $('#footerAllezcine div');
     let footerAllezcineImg = $('#footerAllezcine img');
 
-	let randomImage = Math.floor(Math.random()*24);
+	  let randomImage = Math.floor(Math.random()*24);
 
     for(let m = 0, length1 = footerAllezcine.length; m < length1; m++){
         footerAllezcineImg[m].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].poster_path;
         footerAllezcine[m].id = film[randomImage].id; // CREATE ID FOR EACH ARTICLE CREATED
+        randomImage++;
+    }
+
+    // TOP TRENDS
+    let topTrends = $('#topTrends div');
+    let topTrendsImg = $('#topTrends img');
+    let topTrendsTitle = $('#topTrends .card-title');
+    let topTrendsText = $('#topTrends .card-text');
+
+    for(let c = 0, length1 = topTrends.length; c < length1; c++){
+        topTrendsImg[c].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].poster_path;
+        topTrendsTitle[c].textContent = film[randomImage].title;
+        topTrendsText[c].textContent = film[randomImage].release_year;
+        topTrends[c].id = film[randomImage].id; // CREATE ID FOR EACH ARTICLE CREATED
         randomImage++;
     }
 
@@ -551,9 +564,9 @@ function showFilm(jsonObj) {
 							console.log('Sci-Fi');
 						}
 					}
-					
+
 				}
-				
+
 			}
 		})
 	}
@@ -636,7 +649,7 @@ function showSeries(jsonObj) {
                 notDrama.push(jsonObj['results'][i]);
             }
         }
-        // console.log(notDrama); 
+        // console.log(notDrama);
         for(let i = 0, length1 = notDrama.length; i < length1; i++){
             for(let j = 0, length1 = fillCard.length; j < length1; j++){
                 if (fillCard[j].id == notDrama[i].id) {
@@ -700,28 +713,29 @@ function showSeries(jsonObj) {
 
     // LAUNCH TV SERIES TRAILER ON CLICK
     for(let i = 0, length1 = fillCard.length; i < length1; i++){
-		fillCard[i].addEventListener('click', function() {
-			for(let j = 0, length1 = film.length; j < length1; j++){
-				if (fillCard[i].id == film[j].id) {
-					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
-					$('#trailerModalTitle').text(film[j].name);
-					$('#trailerModalYear').text(film[j].first_air_year);
-					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
-					$('#trailerModalDescription').text(film[j].overview);
-					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
-						if (film[j].genre_ids[k] == 35) {
-							$('#trailerModalGenre').text('Comedy');
-							console.log('Comedy');
-						} else if (film[j].genre_ids[k] == 18) {
-							$('#trailerModalGenre').text('Drama');
-							console.log('Drama');
-						} else if (film[j].genre_ids[k] == 10759) {
-							$('#trailerModalGenre').text('Adventure');
-							console.log('Adventure');
-						}
-					}
-				}
-			}
-		})
-	}
+  		fillCard[i].addEventListener('click', function() {
+  			for(let j = 0, length1 = film.length; j < length1; j++){
+  				if (fillCard[i].id == film[j].id) {
+  					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+  					$('#trailerModalTitle').text(film[j].name);
+  					$('#trailerModalYear').text(film[j].first_air_year);
+  					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+  					$('#trailerModalDescription').text(film[j].overview);
+  					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+  						if (film[j].genre_ids[k] == 35) {
+  							$('#trailerModalGenre').text('Comedy');
+  							console.log('Comedy');
+  						} else if (film[j].genre_ids[k] == 18) {
+  							$('#trailerModalGenre').text('Drama');
+  							console.log('Drama');
+  						} else if (film[j].genre_ids[k] == 10759) {
+  							$('#trailerModalGenre').text('Adventure');
+  							console.log('Adventure');
+  						}
+  					}
+  				}
+  			}
+  		})
+	  }
+
 }

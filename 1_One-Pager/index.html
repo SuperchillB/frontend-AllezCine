@@ -15,6 +15,8 @@
         <script src="https://use.fontawesome.com/b04ca2f55a.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
         <link href="https://fonts.googleapis.com/css?family=Cantarell|Roboto:400,700,900" rel="stylesheet">
     </head>
     <body>
@@ -35,7 +37,7 @@
             </div>
 
             <!-- CAROUSEL & JUMBOTRON -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators">
                 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
                     <a class="navbar-brand" href="#"><span>ALLEZ</span>CINE!</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,54 +67,19 @@
                         </form>
                     </div>
                 </nav>
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="First slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>MO</span>VIES</h1>
-                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
-                            <p class="lead">
-                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="Second slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>TV</span> SERIES</h1>
-                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
-                            <p class="lead">
-                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="Third slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>MO</span>VIES</h1>
-                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
-                            <p class="lead">
-                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/batmanmovie-2017-comedie.jpg" alt="Fourth slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="display-4">LATEST <span>ON</span>LINE <span>TV</span> SERIES</h1>
-                            <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
-                            <p class="lead">
-                                <a class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
-                            </p>
-                        </div>
-                    </div>
+
+                <div class="single-item" id='myImg'>
+
                 </div>
+
+                <div id="overCarousel" class="justify-content-center text-center">
+                  <h1 class="display-4">LATEST <span>ON</span>LINE <span>MO</span>VIES</h1>
+                  <p>IN SPACE NO ONE CAN HEAR YOU SCREAM.</p>
+                  <p class="lead">
+                    <a id='carouselTrailerBtn' class="btn btn-primary btn-lg" href="#" role="button">WATCH TRAILER</a>
+                  </p>
+                </div>
+
             </div>
 
             <!-- LOGIN & SIGNUP BAR -->
@@ -263,35 +230,39 @@
 
 <!-- MAIN -->
         <!-- TOP TRENDS -->
-        <section id="topTrends">
+        <section>
           <div class="d-flex justify-content-center align-items-center">
-            <div class="d-flex justify-content-center w-75">
+            <div id="topTrends" class="d-flex justify-content-center w-75">
               <div class="card">
-                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <img class="card-img-top" src="" alt="">
                 <div class="card-body">
-                  <h6 class="card-title text-center">Cat Attack</h6>
-                  <p class="card-text">2018</p>
+                  <h6 class="card-title text-center"></h6>
+                  <p class="card-text"></p>
+                  <p class="topTrendsGenre"></p>
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <img class="card-img-top" src="" alt="">
                 <div class="card-body">
-                  <h6 class="card-title text-center">Cat Attack</h6>
-                  <p class="card-text">2018</p>
+                  <h6 class="card-title text-center"></h6>
+                  <p class="card-text"></p>
+                  <p class="topTrendsGenre"></p>
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <img class="card-img-top" src="" alt="">
                 <div class="card-body">
-                  <h6 class="card-title text-center">Cat Attack</h6>
-                  <p class="card-text">2018</p>
+                  <h6 class="card-title text-center"></h6>
+                  <p class="card-text"></p>
+                  <p class="topTrendsGenre"></p>
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                <img class="card-img-top" src="" alt="">
                 <div class="card-body">
-                  <h6 class="card-title text-center">Cat Attack</h6>
-                  <p class="card-text">2018</p>
+                  <h6 class="card-title text-center"></h6>
+                  <p class="card-text"></p>
+                  <p class="topTrendsGenre"></p>
                 </div>
               </div>
             </div>
@@ -316,88 +287,88 @@
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="d-flex justify-content-around flex-wrap">
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
 
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
@@ -408,174 +379,174 @@
                     <div class="d-flex justify-content-around flex-wrap">
 
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-
-                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
 
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
 
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h6 class="card-title text-center">Cat Attack</h6>
-                          <p class="card-text">2018</p>
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+
+                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h6 class="card-title text-center"></h6>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
@@ -606,88 +577,88 @@
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="d-flex justify-content-around flex-wrap">
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
 
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
@@ -698,174 +669,174 @@
                     <div class="d-flex justify-content-around flex-wrap">
 
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-
-                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
-                        </div>
-                      </div>
-                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
 
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
 
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                       <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
-                        <img class="card-img-top" src="http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg" alt="">
+                        <img class="card-img-top" src="" alt="">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Cat Attack</h5>
-                          <p class="card-text">2018</p>
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+
+                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                      <div class="card type="button" data-toggle="modal" data-target="#exampleModalCenter"">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center"></h5>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
@@ -881,7 +852,7 @@
 
         <!-- SHOP MOVIES -->
         <section>
-          <h1>SHOP MOVIES</h1>
+          <h1 class="shopMovies">SHOP MOVIES</h1>
 
           <div class="d-flex">
             <div id="shopMovies" class="col-6 d-flex flex-row flex-wrap justify-content-center">
@@ -968,16 +939,16 @@
             </div>
 
             <div class="col">
-              <div class="d-flex justify-content-end mr-4">
+              <div class="d-flex justify-content-end mr-5">
                 <button id="moviePrev" class="btn btn-dark mr-2 rounded-0"><</button>
                 <button id="movieNext" class="btn btn-dark rounded-0">></button>
               </div>
 
               <div id="movieCarousel" class="shopVideos card">
 
-                <ul id="movieCarouselFilm">
-                  <li><iframe src="https://www.youtube.com/embed/hAUTdjf9rko" width="700px" height="425px"></iframe></li>
-                </ul>
+                <div id="movieCarouselFilm" class="d-flex justify-content-center">
+                  <div><iframe src="https://www.youtube.com/embed/hAUTdjf9rko" width="670px" height="400px"></iframe></div>
+                </div>
 
                 <div class="card-body">
                   <h6 class="card-title text-danger">It</h6>
@@ -1053,7 +1024,7 @@
             </div>
             <div class="d-flex">
               <form action="">
-                <button id="contactUsSubmit" class="btn btn-primary">Confirm and Send</button>
+                <button id="contactUsSubmit" class="btn btn-danger">Confirm and Send</button>
               </form>
               <button id="contactUsChange" class="btn btn-secondary">Make Changes</button>
             </div>
@@ -1093,24 +1064,24 @@
                         <h4 class="text-lightgrey">RELEASE</h4>
                         <hr class="bg-secondary">
                         <ul class="list-unstyled">
-                            <li class=" mb-3"><a href="" class="text-muted">2016</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">2015</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">2014</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">2013</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">2012</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">2011</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">2016</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">2015</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">2014</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">2013</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">2012</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">2011</a></li>
                         </ul>
                     </div>
                     <div class="col">
                         <h4 class="text-lightgrey">MOVIES</h4>
                         <hr class="bg-secondary">
                         <ul class="list-unstyled">
-                            <li class=" mb-3"><a href="" class="text-muted">ADVENTURE</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">COMEDY</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">FANTASY</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">ACTION</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">MOVIES</a></li>
-                            <li class=" mb-3"><a href="" class="text-muted">HORROR</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">ADVENTURE</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">COMEDY</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">FANTASY</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">ACTION</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">MOVIES</a></li>
+                            <li class=" mb-3"><a href="#" class="text-muted">HORROR</a></li>
                         </ul>
                     </div>
                     <div class="col">
@@ -1199,6 +1170,10 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/carousel.js">
+
+        </script>
     </body>
 </html>
