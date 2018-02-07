@@ -227,7 +227,7 @@ $(document).ready(function() {
 					$('body').css('overflow', 'hidden');
 					for(let j = 0, length1 = data.length; j < length1; j++){
 						// console.log(photoCards[i].id);
-						console.log(data[j].id);
+						console.log(data[j].photo);
 						if (photoCards[i].id == data[j].id) {
 							console.log('same');
 							$('#photos-modal img').attr('src', data[j].poster);
