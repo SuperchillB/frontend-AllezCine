@@ -1,6 +1,7 @@
 body {
 	box-sizing: border-box;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 .hiding-bg {
@@ -803,21 +804,35 @@ body {
 	  }
 
 	  /* ________________________ MEDIA QUERIES ________________________ */
-	  @media screen and (max-width: 400px) {
-	    .biographyAdaptActors {
-	      display: flex;
-	      flex-direction: column;
-	    }
+		@media screen and (max-width: 950px) {
+			/*______ BIOGRAPHY ______*/
+			.biographyAdaptActors {
+				display: flex;
+				flex-direction: column;
+			}
 
-	    .biographyAdaptActors div {
-	      max-width: 100%;
-	    }
+			.biographyAdaptActors div {
+				max-width: 100%;
+			}
 
-	    .biographyName h4 {
-	      font-size: 2em;
-	    }
+			.biographyName h4 {
+				font-size: 2em;
+			}
 
-	    .bg-allBond {
-	      background-position: right;
-	    }
-	  }
+			.bg-allBond {
+				background-position: right;
+			}
+		}
+
+		@media screen and (max-width: 820px) {
+			/*______ CONTACT US ______*/
+			#contactUs h4 {
+				width: 80%;
+				font-size: 1.1em;
+			}
+
+			.contactForm {
+				width: 60%;
+				font-size: 1em;
+			}
+		}
