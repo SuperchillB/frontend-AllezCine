@@ -40,8 +40,24 @@
     		</div>
     	</nav>
 
-    	<section id="homepage">
-    		
+    	<section id="pre-homepage"> <!-- ADDED -->
+			<div id="messengerContainer">
+				<div id="messenger"></div>
+			</div>
+			<div id="enter-site">Enter</div>
+		</section>
+
+    	<section id="homepage"> <!-- ADDED -->
+    		<div class="hiding-bg"></div>
+			<div class="homepage-grid">
+				<div id="homepage-movies" class="homepage-grid-item homepage-grid-item--height2">Movies</div>
+				<div id="homepage-bio" class="homepage-grid-item homepage-grid-item--width2 homepage-grid-item--height3">Biography</div>
+				<div id="homepage-games" class="homepage-grid-item">Video Games</div>
+				<div id="homepage-books" class="homepage-grid-item homepage-grid-item--height2">Books</div>
+				<div id="homepage-photos" class="homepage-grid-item homepage-grid-item--height3">Photo Gallery</div>
+				<div id="homepage-contact" class="homepage-grid-item homepage-grid-item--height2">Contact Us</div>
+				<div id="homepage-goodies" class="homepage-grid-item homepage-grid-item--width2 homepage-grid-item--height2">Goodies</div>
+			</div>
     	</section>
         
 		<section id="presentation">
@@ -403,8 +419,10 @@
 		</section>
         
         <script src="js/jquery-3.3.1.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script> -->
         <script src="js/masonry-docs/masonry.pkgd.min.js"></script>
         <script src="js/infinite-scroll-docs/infinite-scroll.pkgd.min.js"></script>
+        <!-- <script src="js/jaukia-zoomooz-87ab8d9/jquery.zoomooz.min.js"></script> <!-- ADDED -->
         <script src="js/main.js"></script>
     </body>
 </html>
