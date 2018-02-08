@@ -18,6 +18,158 @@ body {
 	/*display: none;*/
 }
 
+/* ________________________ PRE-HOME ________________________ */
+
+#pre-homepage {
+    height: 100vh;
+    width: 100vw;
+    /*background: url('../img/007gun-barrel.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 150%;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);*/
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#messengerContainer {
+    height: 550px;
+    width: 550px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#enter-site {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    bottom: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: monospace;
+    cursor: pointer;
+    color: red;
+}
+
+#messenger {
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    font-family: monospace;
+    font-size: 20px;
+    /*white-space: nowrap;*/
+    /*width: 100%;*/
+}
+
+
+/* ________________________ HOMEPAGE ________________________ */
+
+#homepage {
+    /*max-width: 100%;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*background-color: lightgrey;*/
+    padding: 50px;
+    /*display: flex; */
+    /*flex-direction: column; */
+    /*justify-content: center; */
+    /*align-items: center; */
+    transition: all ease 0.3s;
+}
+
+.homepage-grid {
+  /*background: #EEE;*/
+  /*max-width: 1200px;*/
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.homepage-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.homepage-grid-item {
+  width: 190px; 
+  height: 90px;
+  float: left;
+  outline: 2px solid #333;
+  background-color: #232323;
+  color: white;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  /*border-radius: 5px;*/
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin: 0 auto;*/
+  font-family: monospace;
+  font-size: 20px;
+  transition: all ease 0.3s;
+}
+
+.homepage-grid-item:hover {
+	background-color: #fff;
+	color: #232323;
+}
+
+.homepage-grid-item--width2 { width: 390px; }
+
+.homepage-grid-item--height2 { height: 190px; }
+.homepage-grid-item--height3 { height: 290px; }
+
+
+ /* MEDIA QUERIES */
+
+@media (min-width: 890px) { /* L */
+    .homepage-grid {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 690px) and (max-width: 889px) { /* M */
+    .homepage-grid {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 493px) and (max-width: 689px) { /* S */
+    .homepage-grid {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 492px) { /* XS */
+    .homepage-grid {
+        max-width: 300px;
+    }
+    .homepage-grid-item {
+        width: 300px;
+        height: 90px;
+    }
+    .homepage-grid-item--width2 {
+        width: 300px;
+    }
+    .homepage-grid-item--height2 {
+        height: 90px;
+    }
+    .homepage-grid-item--height3 {
+        height: 90px;
+    }
+}
+
 /* ________________________ NAV ________________________ */
 
 	nav {
@@ -74,12 +226,15 @@ body {
 	}
 	.nav-toggle span:nth-child(1) {
 		top: 8px;
+		
 	}
 	.nav-toggle span:nth-child(2) {
 		top: 20px;
 	}
 	.nav-toggle.open span:nth-child(1) {
 		top: 14px;
+		/*top: 25px;*/
+		/*left: 20px;*/
 		-webkit-transform: rotate(-135deg);
 	  	-moz-transform: rotate(-135deg);
 	  	-o-transform: rotate(-135deg);
@@ -88,6 +243,8 @@ body {
 	}
 	.nav-toggle.open span:nth-child(2) {
 		top: 14px;
+		/*top: 8px;*/
+		/*left: 22px;*/
 		-webkit-transform: rotate(135deg);
 	  	-moz-transform: rotate(135deg);
 	  	-o-transform: rotate(135deg);
@@ -102,10 +259,17 @@ body {
 		/*transform: translateY(-50%);*/
 		position: absolute;
 	  	top: 15%;
+	  	width: 80%;
+	  	left: 10px;
 	}
 	.nav-menu li {
+		/*display: flex;*/
+		/*align-items: center;*/
+		/*height: 50px;*/
+		padding-left: 30px;
+		padding-top: 20px;
 		list-style: none;
-		margin-top: 30px;
+		margin-top: 10px;
 		cursor: pointer;
 		transition: all ease 0.3s;
 	}
@@ -144,7 +308,7 @@ body {
 	}
 	.pres-Container {
 		max-width: 100%;
-		background-color: lightgrey;
+		/*background-color: lightgrey;*/
 		padding: 50px;
 		/*margin: 50px;*/
 		display: flex;
@@ -153,14 +317,16 @@ body {
 	}
 
 	.pres-title {
-		outline: 1px solid green;
+		/*outline: 1px solid green;*/
+		font-family: courier;
+		font-size: 30px;
 	}
 
 	.pres-cards {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		outline: 1px solid red;
+		/*outline: 1px solid red;*/
 		/*width: 100%;*/
 		padding: 20px;
 	}
@@ -333,10 +499,9 @@ body {
 			transform: translateY(5px);
 		}
 		.card-books:hover .card-books-more{
-		  	transform: translateX(0px);
+		  	transform: translateX(0px) rotateZ(180deg);
 		  	opacity: 1;
 		  	background-color: #505050;
-		  	transform: rotateZ(180deg);
 		}
 		.card-books-more {
 			color: white;
@@ -469,10 +634,9 @@ body {
 			transform: translateY(5px);
 		}
 		.card-games:hover .card-games-more{
-		  	transform: translateX(0px);
+		  	transform: translateX(0px) rotateZ(180deg);
 		  	opacity: 1;
 		  	background-color: #505050;
-		  	transform: rotateZ(180deg);
 		}
 		.card-games-more {
 			color: white;
@@ -577,7 +741,7 @@ body {
 	}
 	.photo-Container {
 		max-width: 100%;
-		background-color: lightgrey;
+		/*background-color: lightgrey;*/
 		padding: 50px;
 		display: flex;
 		flex-direction: column;
@@ -585,14 +749,16 @@ body {
 	}
 
 	.photo-title {
-		outline: 1px solid green;
+		/*outline: 1px solid green;*/
+		font-family: courier;
+		font-size: 30px;
 	}
 
 	.photo-cards-container {
 		display: flex;
 		/*flex-wrap: wrap;*/
 		justify-content: center;
-		outline: 1px solid red;
+		/*outline: 1px solid red;*/
 		/*width: 100%;*/
 		padding: 20px;
 	}
