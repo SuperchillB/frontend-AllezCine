@@ -1,6 +1,8 @@
 # frontend-AllezCine
 First front-end project @ BeCode
 
+https://tsinxias.github.io/allez-cine/1_One-Pager/index.html
+
 ## BeCode - Front-end project
 
 #### Team members
@@ -40,4 +42,4 @@ Website with 5 pages/tabs :
 
 #### C. Newsletter (BONUS PAGE)  
 
-Create a newsletter and test it on :  https://putsmail.com/tests/new 
+Create a newsletter and test it on :  https://putsmail.com/tests/new
