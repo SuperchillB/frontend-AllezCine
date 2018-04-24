@@ -1,7 +1,8 @@
 # frontend-AllezCine
 First front-end project @ BeCode
 
-https://tsinxias.github.io/allez-cine/1_One-Pager/index.html
+### Link to AllezCine website:
+https://superchillb.github.io/frontend-AllezCine/1_One-Pager/index.html
 
 ## BeCode - Front-end project
 
