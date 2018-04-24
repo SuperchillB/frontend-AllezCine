@@ -4,6 +4,9 @@ First front-end project @ BeCode
 ### Link to AllezCine website:
 https://superchillb.github.io/frontend-AllezCine/1_One-Pager/index.html
 
+### Link to Fanpage website:
+https://superchillb.github.io/frontend-AllezCine/2_Fan-page/index.html
+
 ## BeCode - Front-end project
 
 #### Team members
