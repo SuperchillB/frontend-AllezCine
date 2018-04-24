@@ -1,10 +1,10 @@
-# frontend-AllezCine
+# frontend-AllezCine)
 First front-end project @ BeCode
 
-### Link to AllezCine website:
+### Link to AllezCine website (best with Firefox):
 https://superchillb.github.io/frontend-AllezCine/1_One-Pager/index.html
 
-### Link to Fanpage website:
+### Link to Fanpage website (unfinished):
 https://superchillb.github.io/frontend-AllezCine/2_Fan-page/index.html
 
 ## BeCode - Front-end project
