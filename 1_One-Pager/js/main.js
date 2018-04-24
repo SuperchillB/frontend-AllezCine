@@ -130,7 +130,7 @@ $(document).ready(function(){
 $('#buttonUp').hide();
 
 $(window).scroll(function () {
-	if ($(this).scrollTop() > 400) {
+	if ($(this).scrollTop() > 300) {
 		$('#buttonUp').fadeIn();
 	} else {
 		$('#buttonUp').fadeOut();
@@ -313,7 +313,7 @@ function showFilm(jsonObj) {
 
 	for(let i = 0, length1 = shopMovies.length; i < length1; i++){
 		shopMoviesImg[i].src = 'http://image.tmdb.org/t/p/w185' + film[i].poster_path;
-    	shopMoviesTitle[i].textContent = film[i].title;
+    shopMoviesTitle[i].textContent = film[i].title;
 		shopMoviesText[i].textContent = film[i].release_year;
 	}
 
@@ -401,7 +401,6 @@ function showFilm(jsonObj) {
 	    movieCounter: 7
     }];
 
-    let movieCarousel = $('#movieCarousel ul li');
     let movieCarouselIframe = $('#movieCarousel iframe');
     let movieCarouselTitle = $('#movieCarousel .card-title');
     let movieCarouselDescription = $('#movieCarousel .shopDescription');
@@ -508,6 +507,9 @@ function showFilm(jsonObj) {
     let latestMoviesImg = $('#latestMovies img');
     let latestMoviesTitle = $('#latestMovies p');
 
+    latestMovies.attr('data-toggle', 'modal');
+    latestMovies.attr('data-target', '#exampleModalCenter');
+
     let times = 0;
 
     for(let r = 0, length1 = latestMovies.length; r < length1; r++){
@@ -517,11 +519,15 @@ function showFilm(jsonObj) {
         times++;
     }
 
+
     // FOOTER MOVIES ALLEZCINE
     let footerAllezcine = $('#footerAllezcine div');
     let footerAllezcineImg = $('#footerAllezcine img');
 
-	let randomImage = Math.floor(Math.random()*24);
+    footerAllezcine.attr('data-toggle', 'modal');
+    footerAllezcine.attr('data-target', '#exampleModalCenter');
+
+	  let randomImage = Math.floor(Math.random()*24);
 
     for(let m = 0, length1 = footerAllezcine.length; m < length1; m++){
         footerAllezcineImg[m].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].poster_path;
@@ -529,34 +535,135 @@ function showFilm(jsonObj) {
         randomImage++;
     }
 
+
+    // TOP TRENDS
+    let topTrends = $('#topTrends .card');
+    let topTrendsImg = $('#topTrends img');
+    let topTrendsTitle = $('#topTrends .card-title');
+    let topTrendsText = $('#topTrends .card-text');
+
+    topTrends.attr('data-toggle', 'modal');
+    topTrends.attr('data-target', '#exampleModalCenter');
+
+    for(let c = 0, length1 = topTrends.length; c < length1; c++){
+        topTrendsImg[c].src = 'http://image.tmdb.org/t/p/w185' + film[randomImage].poster_path;
+        topTrendsTitle[c].textContent = film[randomImage].title;
+        topTrendsText[c].textContent = film[randomImage].release_year;
+        topTrends[c].id = film[randomImage].id; // CREATE ID FOR EACH ARTICLE CREATED
+        randomImage++;
+    }
+
+
     // LAUNCH MOVIE TRAILER ON CLICK
     for(let i = 0, length1 = fillCard.length; i < length1; i++){
-		fillCard[i].addEventListener('click', function() {
-			for(let j = 0, length1 = film.length; j < length1; j++){
-				if (fillCard[i].id == film[j].id) {
-					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
-					$('#trailerModalTitle').text(film[j].title);
-					$('#trailerModalYear').text(film[j].release_year);
-					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
-					$('#trailerModalDescription').text(film[j].overview);
-					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
-						if (film[j].genre_ids[k] == 28) {
-							$('#trailerModalGenre').text('Action');
-							console.log('Action');
-						} else if (film[j].genre_ids[k] == 53) {
-							$('#trailerModalGenre').text('Thriller');
-							console.log('Thriller');
-						} else if (film[j].genre_ids[k] == 878) {
-							$('#trailerModalGenre').text('Sci-Fi');
-							console.log('Sci-Fi');
-						}
-					}
-					
-				}
-				
-			}
-		})
-	}
+  		fillCard[i].addEventListener('click', function() {
+  			for(let j = 0, length1 = film.length; j < length1; j++){
+  				if (fillCard[i].id == film[j].id) {
+  					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+  					$('#trailerModalTitle').text(film[j].title);
+  					$('#trailerModalYear').text(film[j].release_year);
+  					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+  					$('#trailerModalDescription').text(film[j].overview);
+  					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+  						if (film[j].genre_ids[k] == 28) {
+  							$('#trailerModalGenre').text('Action');
+  							console.log('Action');
+  						} else if (film[j].genre_ids[k] == 53) {
+  							$('#trailerModalGenre').text('Thriller');
+  							console.log('Thriller');
+  						} else if (film[j].genre_ids[k] == 878) {
+  							$('#trailerModalGenre').text('Sci-Fi');
+  							console.log('Sci-Fi');
+  						}
+  					}
+  				}
+  			}
+  		})
+	  }
+
+
+    // FOOTER TRAILER LAUNCH
+    for(let i = 0, length1 = footerAllezcine.length; i < length1; i++){
+      footerAllezcine[i].addEventListener('click', function() {
+        for(let j = 0, length1 = film.length; j < length1; j++){
+          if (footerAllezcine[i].id == film[j].id) {
+            $('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+            $('#trailerModalTitle').text(film[j].title);
+            $('#trailerModalYear').text(film[j].release_year);
+            $('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+            $('#trailerModalDescription').text(film[j].overview);
+            for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+              if (film[j].genre_ids[k] == 28) {
+                $('#trailerModalGenre').text('Action');
+                console.log('Action');
+              } else if (film[j].genre_ids[k] == 53) {
+                $('#trailerModalGenre').text('Thriller');
+                console.log('Thriller');
+              } else if (film[j].genre_ids[k] == 878) {
+                $('#trailerModalGenre').text('Sci-Fi');
+                console.log('Sci-Fi');
+              }
+            }
+          }
+        }
+      })
+    }
+
+    for(let i = 0, length1 = latestMovies.length; i < length1; i++){
+      latestMovies[i].addEventListener('click', function() {
+        for(let j = 0, length1 = film.length; j < length1; j++){
+          if (latestMovies[i].id == film[j].id) {
+            $('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+            $('#trailerModalTitle').text(film[j].title);
+            $('#trailerModalYear').text(film[j].release_year);
+            $('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+            $('#trailerModalDescription').text(film[j].overview);
+            for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+              if (film[j].genre_ids[k] == 28) {
+                $('#trailerModalGenre').text('Action');
+                console.log('Action');
+              } else if (film[j].genre_ids[k] == 53) {
+                $('#trailerModalGenre').text('Thriller');
+                console.log('Thriller');
+              } else if (film[j].genre_ids[k] == 878) {
+                $('#trailerModalGenre').text('Sci-Fi');
+                console.log('Sci-Fi');
+              }
+            }
+          }
+        }
+      })
+    }
+
+    //TOPTRENDS TRAILER LAUNCH
+    for(let i = 0, length1 = topTrends.length; i < length1; i++){
+      topTrends[i].addEventListener('click', function() {
+        for(let j = 0, length1 = film.length; j < length1; j++){
+          if (topTrends[i].id == film[j].id) {
+            $('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+            $('#trailerModalTitle').text(film[j].title);
+            $('#trailerModalYear').text(film[j].release_year);
+            $('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+            $('#trailerModalDescription').text(film[j].overview);
+            for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+              if (film[j].genre_ids[k] == 28) {
+                $('#trailerModalGenre').text('Action');
+                console.log('Action');
+              } else if (film[j].genre_ids[k] == 53) {
+                $('#trailerModalGenre').text('Thriller');
+                console.log('Thriller');
+              } else if (film[j].genre_ids[k] == 878) {
+                $('#trailerModalGenre').text('Sci-Fi');
+                console.log('Sci-Fi');
+              }
+            }
+          }
+        }
+      })
+    }
+
+
+
 }
 
 
@@ -636,7 +743,7 @@ function showSeries(jsonObj) {
                 notDrama.push(jsonObj['results'][i]);
             }
         }
-        // console.log(notDrama); 
+        // console.log(notDrama);
         for(let i = 0, length1 = notDrama.length; i < length1; i++){
             for(let j = 0, length1 = fillCard.length; j < length1; j++){
                 if (fillCard[j].id == notDrama[i].id) {
@@ -700,28 +807,29 @@ function showSeries(jsonObj) {
 
     // LAUNCH TV SERIES TRAILER ON CLICK
     for(let i = 0, length1 = fillCard.length; i < length1; i++){
-		fillCard[i].addEventListener('click', function() {
-			for(let j = 0, length1 = film.length; j < length1; j++){
-				if (fillCard[i].id == film[j].id) {
-					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
-					$('#trailerModalTitle').text(film[j].name);
-					$('#trailerModalYear').text(film[j].first_air_year);
-					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
-					$('#trailerModalDescription').text(film[j].overview);
-					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
-						if (film[j].genre_ids[k] == 35) {
-							$('#trailerModalGenre').text('Comedy');
-							console.log('Comedy');
-						} else if (film[j].genre_ids[k] == 18) {
-							$('#trailerModalGenre').text('Drama');
-							console.log('Drama');
-						} else if (film[j].genre_ids[k] == 10759) {
-							$('#trailerModalGenre').text('Adventure');
-							console.log('Adventure');
-						}
-					}
-				}
-			}
-		})
-	}
+  		fillCard[i].addEventListener('click', function() {
+  			for(let j = 0, length1 = film.length; j < length1; j++){
+  				if (fillCard[i].id == film[j].id) {
+  					$('#trailerModalVideo').attr('src', 'https://www.youtube.com/embed/'+ film[j].youtube);
+  					$('#trailerModalTitle').text(film[j].name);
+  					$('#trailerModalYear').text(film[j].first_air_year);
+  					$('#trailerModalImg').attr('src', 'http://image.tmdb.org/t/p/w185' + film[j].poster_path);
+  					$('#trailerModalDescription').text(film[j].overview);
+  					for(let k = 0, length1 = film[j].genre_ids.length; k < length1; k++){
+  						if (film[j].genre_ids[k] == 35) {
+  							$('#trailerModalGenre').text('Comedy');
+  							console.log('Comedy');
+  						} else if (film[j].genre_ids[k] == 18) {
+  							$('#trailerModalGenre').text('Drama');
+  							console.log('Drama');
+  						} else if (film[j].genre_ids[k] == 10759) {
+  							$('#trailerModalGenre').text('Adventure');
+  							console.log('Adventure');
+  						}
+  					}
+  				}
+  			}
+  		})
+	  }
+
 }

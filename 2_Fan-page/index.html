@@ -7,42 +7,655 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/b04ca2f55a.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/shop.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
+    	<!-- <div class="hiding-bg"></div> -->
+
     	<nav>
-    		
+
+    		<div class="nav-container">
+    			<div class="nav-toggle">
+    				<span></span>
+    				<span></span>
+    			</div>
+				<ul class="nav-menu">
+    				<li id="nav-homepage" class="nav-menu-li">HOME</li>
+    				<li class="nav-menu-li">
+    					PRESENTATION <span>&#8964;</span>
+    					<ul class="nav-dropdown">
+							<li id="nav-pres-movies">Movies</li>
+							<li id="nav-pres-books">Books</li>
+							<li id="nav-pres-games">Video Games</li>
+    					</ul>
+    				</li>
+    				<li id="nav-biography" class="nav-menu-li">BIOGRAPHY</li>
+    				<li id="nav-photo-gallery" class="nav-menu-li">PHOTO GALLERY</li>
+    				<li id="nav-goodies" class="nav-menu-li">GOODIES</li>
+    				<li id="nav-contact" class="nav-menu-li">CONTACT</li>
+    			</ul>
+    		</div>
     	</nav>
 
-    	<section id="homepage">
-    		
+
+    	<section id="pre-homepage"> <!-- ADDED -->
+  			<div id="messengerContainer">
+  				<div id="messenger"></div>
+  			</div>
+  			<div id="enter-site">Enter</div>
+		  </section>
+
+    	<section id="homepage"> <!-- ADDED -->
+    		<div class="hiding-bg"></div>
+    			<div class="homepage-grid">
+    				<div id="homepage-movies" class="homepage-grid-item homepage-grid-item--height2">Movies</div>
+    				<div id="homepage-bio" class="homepage-grid-item homepage-grid-item--width2 homepage-grid-item--height3">Biography</div>
+    				<div id="homepage-games" class="homepage-grid-item">Video Games</div>
+    				<div id="homepage-books" class="homepage-grid-item homepage-grid-item--height2">Books</div>
+    				<div id="homepage-photos" class="homepage-grid-item homepage-grid-item--height3">Photo Gallery</div>
+    				<div id="homepage-contact" class="homepage-grid-item homepage-grid-item--height2">Contact Us</div>
+    				<div id="homepage-goodies" class="homepage-grid-item homepage-grid-item--width2 homepage-grid-item--height2">Goodies</div>
+    			</div>
     	</section>
-        
+
 		<section id="presentation">
-			
+
+			<div class="hiding-bg"></div>
+			<div class="pres-Container">
+				<div class="pres-title">
+					<h1>Category</h1>
+				</div>
+
+				<div id="pres-movies" class="pres-cards">
+
+					<!-- MOVIES MODAL -->
+					<div id="movies-modal">
+						<div class="movies-modal-cross">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="movies-modal-content">
+							<div class="movies-modal-top">
+								<iframe id="movies-modal-trailer" src="https://www.youtube.com/embed/Yj0l7iGKh8g" frameborder="0"></iframe>
+							</div>
+							<div class="movies-modal-bottom">
+								<div>
+									<h5>TITLE</h5>
+									<p>YEAR</p>
+								</div>
+								<div>DESCRIPTION</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+					<div class="card-movies">
+						<div class="card-top">
+							<div class="card-circle">&#9658;</div>
+							<img src="../img/shutterisland-2010-thriller.jpg" alt="">
+						</div>
+					</div>
+
+				</div>
+
+				<div id="pres-books" class="pres-cards">
+
+					<!-- BOOKS MODAL -->
+					<div id="books-modal">
+						<div class="books-modal-cross">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="books-modal-content">
+							<div class="books-modal-left">
+								<img src="" alt="">
+							</div>
+							<div class="books-modal-right">
+								<div>
+									<h5>TITLE</h5>
+									<p>YEAR</p>
+								</div>
+								<div>DESCRIPTION</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-books">
+						<div class="card-books-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+
+				</div>
+
+				<div id="pres-games" class="pres-cards">
+
+					<!-- GAME MODAL -->
+					<div id="games-modal">
+						<div class="games-modal-cross">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="games-modal-content">
+							<div class="games-modal-left">
+								<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+							</div>
+							<div class="games-modal-right">
+								<div>
+									<h5>TITLE</h5>
+									<p>YEAR</p>
+								</div>
+								<div>DESCRIPTION</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+					<div class="card-games">
+						<div class="card-games-more">+</div>
+						<img src="../img/batmanmovie-2017-comedie.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
 		</section>
 
 		<section id="biography">
-			
+			<div>
+			  <h1 class="display-3 text-center">Biography</h1>
+        <div id="biographyBond">
+          <div class="biographyName">
+            <div class="d-flex justify-content-center align-items-center">
+              <h4 class="text-center cursorPointer">James Bond</h4>
+              <img id="biographyArrowBond" class="biographyBond cursorPointer" src="img/upArrow.svg" alt="">
+            </div>
+            <hr>
+          </div>
+          <div class="biographyDescription bioBond">
+            <!-- <img src="img/allBond.png" alt=""> -->
+            <div class="d-flex flex-column justify-content-center align-items-center bg-allBond">
+              <h2>Description</h2>
+              <p>Commander <a href="https://en.wikipedia.org/wiki/James_Bond_(literary_character)">James Bond</a>  is a fictional character created by the British journalist and novelist Ian Fleming in 1953. The Bond character is a Secret Service agent, code number 007, residing in London but active internationally.</p>
+              <p>Bond was a composite character based on a number of commandos whom Fleming knew during his service in the Naval Intelligence Division during the World War II, to whom Fleming added his own style and a number of his own tastes; Bond's name was appropriated from the American ornithologist James Bond. Bond has a number of character traits which run throughout the books, including an enjoyment of cars, a love of food and drink, and an average intake of sixty custom-made cigarettes a day.</p>
+              <p>This fiction has been implemented under multiple medias : Books, Movies and Games.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="d-flex biographyAdaptActors">
+            <div class="col-6">
+              <div>
+                <div class="biographyName">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyConnery cursorPointer">Sean Connery</h4>
+                    <img id="biographyArrowConnery" class="biographyConnery cursorPointer" src="img/upArrow.svg" alt="">
+                  </div>
+                  <hr>
+                </div>
+                <div class="biographyDescription Connery">
+                  <div>
+                    <h2>Description</h2>
+                    <p>Thomas Sean Connery (born 25 August 1930) is a retired Scottish actor. Connery was the first actor to portray the character James Bond in film, starring in seven Bond films between 1962 and 1983.</p>
+                    <p>He played 007 in the first five Bond films: Dr. No (1962), From Russia with Love (1963), Goldfinger (1964), Thunderball (1965), and You Only Live Twice (1967) – then appeared again as Bond in Diamonds Are Forever (1971) and Never Say Never Again (1983). All seven films were commercially successful. James Bond, as portrayed by Connery, was selected as the third-greatest hero in cinema history by the American Film Institute.</p>
+                    <p>James Bond's creator, Ian Fleming, originally doubted Connery's casting, saying:</p>
+                    <div class="d-flex align-items-center">
+                      <span>“</span>
+                      <p>He's not what I envisioned of James Bond looks", and "I'm looking for Commander Bond and not an overgrown stunt-man</p>
+                      <span>”</span>
+                    </div>
+                    <p>During the filming of Thunderball in 1965, Connery's life was in danger in the sequence with the sharks in Emilio Largo's pool. He had been concerned about this threat when he read the script. Connery insisted that Ken Adam build a special Plexiglas partition inside the pool, but this was not a fixed structure, and one of the sharks managed to pass through it. He had to abandon the pool immediately.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="biographyName">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyMoore cursorPointer">Roger Moore</h4>
+                    <img id="biographyArrowMoore" class="biographyMoore cursorPointer" src="img/downArrow.svg" alt="">
+                  </div>
+                  <hr>
+                </div>
+                <div class="biographyDescription Moore">
+                  <div>
+                    <h2>Description</h2>
+                    <p>Roger George Moore (14 October 1927 – 23 May 2017) was an English actor. He is best known for having played Ian Fleming's British secret agent James Bond in seven feature films from 1973 to 1985. </p>
+                    <p>Moore took over the role of Bond from Sean Connery in 1972, made his first appearance as 007 in Live and Let Die (1973), and went on to portray the spy in six more films until his retirement from the role in 1985. Those other films were: The Man with the Golden Gun (1974), The Spy Who Loved Me (1977), Moonraker (1979), For Your Eyes Only (1981), Octopussy (1983) and A View to a Kill (1985).</p>
+                    <p>Moore was the longest-serving James Bond actor, having spent 12 years in the role, having made seven of the Eon Production Bond films in a row. Moore was the oldest actor to have played Bond – he was 58 when he announced his retirement on 3 December 1985.</p>
+                    <p>Moore's Bond was very different from the version created by Ian Fleming. Screenwriters such as George MacDonald Fraser provided scenarios in which Moore was cast as a seasoned, debonair playboy who would always have a trick or gadget in stock when he needed it. This was designed to serve the contemporary taste of the 1970s. Moore's version of Bond was also known for his sense of humour and witty one liners, Moore himself said, "My personality is different from previous Bonds. I’m not that cold-blooded killer type. Which is why I play it mostly for laughs."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="biographyName">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyBrosnan cursorPointer">Pierce Brosnan</h4>
+                    <img id="biographyArrowBrosnan" class="biographyBrosnan cursorPointer" src="img/downArrow.svg" alt="">
+                  </div>
+                  <hr>
+                </div>
+                <div class="biographyDescription Brosnan">
+                  <div>
+                    <h2>Description</h2>
+                    <p>Pierce Brendan Brosnan OBE (Honorary) (born 16 May 1953) is an Irish actor, film producer, and activist. In 1994, Brosnan became the fifth actor to portray secret agent James Bond in the Eon Productions film series, starring in four films from 1995 to 2002. He lent his likeness for Bond in the video games GoldenEye 007, James Bond 007: Nightfire and James Bond 007: Everything or Nothing, providing his voice for the latter.</p>
+                    <p>Brosnan first met James Bond films producer Albert R. Broccoli on the sets of For Your Eyes Only. In 1987, NBC cancelled Remington Steele. Brosnan was offered the role of James Bond, but the publicity improved Remington Steele's ratings and it was renewed, requiring Brosnan to contractually return to the show, this caused Eon Productions to have to look elsewhere for the new 007. The producers instead hired Timothy Dalton for The Living Daylights (1987), and Licence to Kill (1989).</p>
+                    <p>Brosnan was signed for a three-film Bond deal with the option of a fourth. He first played Bond in 1995's GoldenEye. Brosnan returned in 1997's Tomorrow Never Dies and 1999's The World Is Not Enough, which were also successful. In 2002, Brosnan appeared for his fourth time as Bond in Die Another Day, receiving mixed reviews similarly to the former two, but was a success at the box office. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div>
+                <div class="biographyName">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyLazenby cursorPointer">George Lazenby</h4>
+                    <img id="biographyArrowLazenby" class="biographyLazenby cursorPointer" src="img/upArrow.svg" alt="">
+                  </div>
+                  <hr>
+                </div>
+                <div class="biographyDescription Lazenby">
+                  <div>
+                    <h2>Description</h2>
+                    <p>George Robert Lazenby (born 5 September 1939) is an Australian actor and former model best known for his portrayal of James Bond in the Eon series in the 1969 film On Her Majesty's Secret Service at the age of 29, making him the youngest actor to date to have portrayed the character. Lazenby is also the only Bond actor to receive a nomination for the Golden Globe Award for New Star of the Year – Actor.</p>
+                    <p>In 1968, after Sean Connery had left the role of James Bond, producer Albert R. Broccoli met Lazenby for the first time while they were getting their hair cut at the same barber. Broccoli later saw him in the Big Fry commercial and felt he could be a possible Bond, inviting him to do a screen test.</p>
+                    <p>Lazenvy was signed for one Bond film: On Her Majesty's Secret Service. Director Peter R. Hunt later claimed: </p>
+                    <br>
+                    <div class="d-flex justify-content-between">
+                      <span>“</span>
+                      <p>We wanted someone who oozed sexual assurance, and we think this fellow has that. Just wait til the women see him on screen ... I am not saying he is an actor. There is a great deal of difference between an actor and a film star. Didn't they find Gary Cooper when he was an electrician?</p>
+                      <span>”</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="biographyName">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyDalton cursorPointer">Timothy Dalton</h4>
+                    <img id="biographyArrowDalton" class="biographyDalton cursorPointer" src="img/downArrow.svg" alt="">
+                  </div>
+                  <hr>
+                </div>
+                <div class="biographyDescription Dalton">
+                  <div>
+                    <h2>Description</h2>
+                    <p>Timothy Dalton (born 21 March 1946) is a British actor. He is best known for portraying James Bond in The Living Daylights (1987) and Licence to Kill (1989).</p>
+                    <p>Dalton had been considered for the role of James Bond several times. According to the documentary Inside The Living Daylights, the producers first approached Dalton in 1968 for On Her Majesty's Secret Service although Dalton himself in this same documentary claims the approach occurred when he was either 24 or 25 and had already done the film Mary, Queen of Scots (1971). Dalton told the producers that he was too young for the role. In a 1987 interview, Dalton said: </p>
+                    <div class="d-flex align-items-center">
+                      <span>“</span>
+                      <p>"Originally I did not want to take over from Sean Connery. He was far too good, he was wonderful.</p>
+                      <span>”</span>
+                    </div>
+                    <p>Unlike Moore, who had played Bond as more of a light-hearted playboy, Dalton's portrayal of Bond was darker and more serious. Dalton pushed for renewed emphasis on the gritty realism of Ian Fleming's novels instead of fantasy plots and humour.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="biographyName">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h4 class="biographyCraig cursorPointer">Daniel Craig</h4>
+                    <img id="biographyArrowCraig" class="biographyCraig cursorPointer" src="img/downArrow.svg" alt="">
+                  </div>
+                  <hr>
+                </div>
+                <div class="biographyDescription Craig">
+                  <div>
+                    <h2>Description</h2>
+                    <p>Daniel Wroughton Craig (born 2 March 1968) is an English actor. Cast as the British secret agent James Bond in October 2005, his first film in the role, Casino Royale. He is the first actor to portray James Bond to have been born after the Bond series started and after the death of Ian Fleming, the novels' writer.</p>
+                    <p>Craig achieved international fame when chosen as the sixth actor to play the role of Ian Fleming's James Bond in the official film series, taking over from Pierce Brosnan in 2005. His debut was highly acclaimed and earned him a BAFTA award nomination, with Casino Royale becoming the highest-grossing in the series at the time. Quantum of Solace followed two years later.</p>
+                    <p>The casting choice caused significant controversy. The 5-foot-10-inch (178 cm) blond Craig was not considered by some protesters to fit the tall, dark Bond portrayed by the previous Bond actors, to which viewers had apparently become accustomed.</p>
+                    <p>Craig actually played Bond in 4 films: Casino Royale, Quantum of Solace, Skyfall and Spectre. His portrayal of Bond was actually an anti-hero:</p>
+                    <div class="d-flex">
+                      <span>“</span>
+                      <p>The question I keep asking myself while playing the role is, 'Am I the good guy or just a bad guy who works for the good side?' Bond's role, after all, is that of an assassin when you come down to it. I have never played a role in which someone's dark side shouldn't be explored. I don't think it should be confusing by the end of the film, but during the film you should be questioning who he is.</p>
+                      <span>”</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+			</div>
 		</section>
 
 		<section id="photoGallery">
-			
+
+			<div class="hiding-bg"></div>
+			<div class="photo-Container">
+				<div class="photo-title">
+					<h1>Photo Gallery</h1>
+				</div>
+
+				<!-- PHOTOS MODAL -->
+				<div id="photos-modal">
+					<div class="photos-modal-cross">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="photos-modal-content"><img src="#" alt=""></div>
+				</div>
+
+				<div class="photo-cards-container"></div>
+			</div>
 		</section>
-		
+
 		<section id="goodies">
-			
+      <div id="app">
+        <div id="product">
+          <item v-for="item in items" v-bind:item_data="item"></item>
+        </div>
+        <div id="cart">
+          <div id="head">
+
+            <!-- <div id="price">Price</div>
+          <div id="quantity">Quantity</div>
+          <div id="total">Total</div> -->
+          </div>
+          <h3 class="goodiesH3">Shopping Cart : </h3>
+          <buyitem v-for="buyitem in buyitems" v-bind:buy_data="buyitem"></buyitem>
+
+          <h5 class="goodiesH5" v-if="total()">Sum: $ {{total()}}</h5>
+          <h6 class="goodiesH6"> Checkout </h6>
+        </div>
+      </div>
+
+      <template id="product-box">
+        <div class="box">
+          <img :src="item_data.img"/>
+          <i class="goodiesFont fa fa-cart-plus" v-on:click="addItem(item_data)"></i>
+          <h2>{{item_data.title}}</h2>
+          <p>$ {{item_data.price}}</p>
+        </div>
+      </template>
+
+      <template id="buy-box">
+          <div class="row">
+              <img :src="buy_data.img"/>
+              <h4>{{buy_data.title}}</h4>
+              <p>$ {{buy_data.price}}</p>
+              <div class="qty-minus" v-on:click="minusQty(buy_data)"><i class="goodiesFont fas fa-angle-double-down "></i></div>
+              <div class="qty">{{buy_data.qty}}</div>
+              <div class="qty-plus" v-on:click="plusQty(buy_data)"><i class="goodiesFont fas fa-angle-double-up"></i></div>
+              <div class="del" v-on:click="removeItem(buy_data)"><i class="goodiesFont far fa-trash-alt" ></i></div>
+              <div class="totalprice"> $ {{buy_data.total}}</div>
+          </div>
+      </template>
+
 		</section>
 
 		<section id="contactUs">
-			
+      <div id="bgContact" class="text-center d-flex flex-column align-items-center">
+        <h1 class="display-3 text-center">Contact Us</h1>
+        <h4>Want to join be part of this James Bond fan project or ask some questions ? <br>Send us a mail here !</h4>
+
+        <p id="contactError">Please fill in everything.</p>
+        <form action="" class="contactForm d-flex flex-column align-items-center justify-content-center">
+          <input id="contactName" type="text" class="form-control" placeholder="NAME ( James Bond )" required>
+          <input id="contactEmail" type="email" class="form-control" placeholder="EMAIL ( james_bond_007@hotmail.com )" required>
+          <input id="contactSubject" type="text" class="form-control" placeholder="SUBJECT ( Top secret )" required>
+          <textarea id="contactMessage" name="name" rows="8" class="w-100" placeholder="YOUR MESSAGE" required></textarea>
+          <button id="contactSubmit" type="submit" class="form-control btn btn-dark">Send</button>
+        </form>
+
+        <h4 class="text-center text-light mb-3 mt-3">You can also follow us on our Social Medias :</h4>
+        <div class="mt-3">
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-facebook" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-twitter" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-instagram" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light pr-4 fa fa-3x fa-youtube" aria-hidden="true"></i></a>
+          <a href=""><i class="text-light fa fa-3x fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+      </div>
 		</section>
-        
+
+
         <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/masonry-docs/masonry.pkgd.min.js"></script>
+        <script src="js/infinite-scroll-docs/infinite-scroll.pkgd.min.js"></script>
+        <script src="js/shop.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

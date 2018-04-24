@@ -1,3 +1,10 @@
+
+				/* ____________________________ BODY ____________________________ */
+
+body {
+	overflow-x: hidden;
+}
+
 				/* ____________________________ NAVBAR ____________________________ */
 
 /*Navbar brand styling*/
@@ -63,6 +70,14 @@
 	color: rgb(200, 200, 200);
 }
 
+				/* ____________________________ HEADER CAROUSEL ____________________________ */
+
+#overCarousel {
+	position: relative;
+	top: -500px;
+	margin-bottom: -176px;
+}
+
 				/* ____________________________ JUMBOTRON ____________________________ */
 
 #carouselExampleIndicators h1 {
@@ -91,7 +106,7 @@ h1 span {
 				/* ____________________________ MODALS ____________________________ */
 
 #signUpModal, #loginModal, #contactUsEntries {
-	height: 300px;
+	min-height: 300px;
 	width: 400px;
 	background-color: #fff;
 	border: 2px solid red;
@@ -261,23 +276,27 @@ h1 span {
 	margin: 10px;
 }
 
-#topTrends .card, #featuredMovies .card, #featuredTvSeries .card {
+#topTrends .card, #featuredMovies .card, #featuredTvSeries .card, #shopMovies .card {
 	cursor: pointer;
 }
 
-#featuredMovies h1, #featuredTvSeries h1, #shopMovies h1 {
+#featuredMovies h1, #featuredTvSeries h1, .shopMovies {
 	border-left: 5px solid red;
 	padding-left: 10px;
 }
 
 /* ____________________________ SHOP MOVIES ____________________________ */
+.shopMovies {
+	margin-left: 80px;
+}
+
 #shopMovies .card {
 	width: 160px;
 	margin: 10px 10px 10px 10px;
 }
 
 #movieCarousel {
-	width: 700px;
+	width: 92%;
 	/*margin: auto;*/
 	/*overflow: hidden;*/
 	/*position: relative;*/
@@ -297,13 +316,24 @@ h1 span {
 	list-style: none;
 }
 
-
-.movieShow {
-	display: block;
+#movieCarouselFilm div {
+	width: 100%;
+	min-height: 100px;
+	height: 400px;
+	max-height: 400px;
 }
 
-.movieHide {
-	display: none;
+/* ____________________________ CONTACT US ____________________________ */
+#contactUsEntries {
+	padding: 25px;
+}
+
+#contactUsEntries strong {
+	color: red;
+}
+
+#contactUsMessage {
+	max-width: 350px;
 }
 
 /* ____________________________ BUTTON UP ____________________________ */
@@ -345,4 +375,12 @@ h4 span {
 
 .text-lightgrey {
 	color: #A4A4A4;
+}
+
+/* ________________________ MEDIA QUERIES ________________________ */
+@media screen and (max-width: 400px) {
+	body {
+		width: 100%;
+	}
+	/*.movieCarouselFilm*/
 }
