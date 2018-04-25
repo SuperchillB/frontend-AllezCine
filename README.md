@@ -1,10 +1,10 @@
 # frontend-AllezCine)
 First front-end project @ BeCode
 
-### Link to AllezCine website (best with Firefox):
+### Link to AllezCine website (If you have installed an ad-blocking extention in your browser, please disactivate it):
 https://superchillb.github.io/frontend-AllezCine/1_One-Pager/index.html
 
-### Link to Fanpage website (unfinished):
+### Link to Fanpage website (unfinished) (If you have installed an ad-blocking extention in your browser, please disactivate it):
 https://superchillb.github.io/frontend-AllezCine/2_Fan-page/index.html
 
 ## BeCode - Front-end project
@@ -19,14 +19,15 @@ Tsinxias Zhang.
 ### Project description
 
 **Deadline** : 2 weeks  
-**Language used** :  
-- HTML
-- CSS
+**Technology used** :  
+- HTML5
+- CSS3
 - JavaScript
 - JQuery
-- Responsive Design (Media Queries)
-- Bootstrap
-- Font Awesome Icons
+- AJAX (JS & jQuery methods) to fetch movies/tv-shows/books/video-games data
+- JSON (stored online as movies/tv-shows/books/video-games db)
+- Bootstrap4
+- Fontawesome4
 
 
 #### A. One Pager
